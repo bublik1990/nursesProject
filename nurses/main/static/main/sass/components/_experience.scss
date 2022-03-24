@@ -1,0 +1,75 @@
+.experience {
+  background-color: $section-background-color;
+}
+
+.experience__container {
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @media screen and(min-width: $tablet-breakpoint) {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+
+  @media screen and(min-width: $netbook-breakpoint) {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+}
+
+.experience__text {
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+}
+
+.experience__gallery {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and(min-width: $netbook-breakpoint) {
+    margin-top: 60px;
+  }
+}
+
+.experience__item {
+  width: calc((100% - 40px) / 2);
+
+  @media screen and(min-width: $tablet-breakpoint) {
+    width: calc((100% - 50px) / 2);
+  }
+
+  @media screen and(min-width: $netbook-breakpoint) {
+    width: calc((100% - 100px) / 2);
+  }
+}
+
+.experience__item:nth-child(2n + 1) {
+  margin-right: 40px;
+
+  @media screen and(min-width: $tablet-breakpoint) {
+    margin-right: 50px;
+  }
+
+  @media screen and(min-width: $netbook-breakpoint) {
+    margin-right: 100px;
+  }
+}
+
+.experience__item:nth-child(-n + 2) {
+  margin-bottom: 40px;
+
+  @media screen and(min-width: $tablet-breakpoint) {
+    margin-bottom: 22px;
+  }
+
+  @media screen and(min-width: $netbook-breakpoint) {
+    margin-bottom: 38px;
+  }
+}
+
+.experience__image {
+  width: 100%;
+}

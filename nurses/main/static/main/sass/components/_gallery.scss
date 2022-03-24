@@ -1,0 +1,28 @@
+.gallery {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.gallery__container {
+  margin-top: 25px;
+}
+
+.gallery .carousel__item {
+  padding: 8px;
+
+  @media screen and (min-width: 360px) {
+    padding: 10px;
+  }
+
+  @media screen and (min-width: 420px) {
+    padding: 12px;
+  }
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    padding: 15px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 24px;
+  }
+}

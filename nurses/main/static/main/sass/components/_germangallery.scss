@@ -1,0 +1,94 @@
+.carousel__container {
+  position: relative;
+}
+
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  width: 26px;
+  height: 100%;
+  border: none;
+  z-index: 1;
+  background-color: $white-color;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    width: 36px;
+  }
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    width: 56px;
+  }
+}
+
+.carousel__button-left {
+  left: 0;
+  padding-left: 8px;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    padding-left: 13px;
+  }
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    padding-left: 17px;
+  }
+}
+
+.carousel__button-right {
+  right: 0;
+  padding-right: 8px;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    padding-right: 13px;
+  }
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    padding-right: 17px;
+  }
+}
+
+.carousel__button .arrow-button {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    width: 14px;
+    height: 14px;
+  }
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    width: 25px;
+    height: 25px;
+    border-width: 0 3px 3px 0;
+  }
+}
+
+.carousel__right-arrow {
+  margin-left: auto;
+  right: 0;
+}
+
+.carousel__gallery {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.germangallery .carousel__item {
+  padding: 16px;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    padding: 26px;
+  }
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    padding: 46px;
+  }
+}
+
+.carousel__item img {
+  width: 100%;
+}

@@ -1,0 +1,51 @@
+.requirement__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 850px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.requirement__content {
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-right: 12px;
+  padding-bottom: 20px;
+  padding-left: 12px;
+  border: 1px solid $brand-color;
+  border-radius: 13px;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    margin-top: 40px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    padding-top: 25px;
+  }
+}
+
+.requirement__list {
+  margin-top: 30px;
+  line-height: 1.7;
+}
+
+.requirement__item {
+
+  &::before {
+    margin-right: 19px;
+    width: 2px;
+    height: 2px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 7px;
+    background-color: black;
+    content: '';
+  }
+}
+
+.requirement__button {
+  margin-top: 30px;
+}

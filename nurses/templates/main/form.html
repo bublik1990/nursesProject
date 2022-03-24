@@ -1,0 +1,263 @@
+{% extends 'base.html' %} {% load i18n %} {% load static %} {% load compress %}
+
+{% block styles %}
+  <link type="text/x-scss" href="{% static 'main/sass/form.scss' %}" rel="stylesheet" media="screen">
+{% endblock %}
+
+
+
+{% block header_menu %}
+  <ul class="header__list menu">
+    <li class="menu__item"><a class="menu__link scrollto" href="{% url 'home' %}">{% translate 'Головна' %}</a></li>
+    <li class="menu__item"><a class="menu__link scrollto" href="{% url 'home' %}#about">{% translate 'Про нас' %}</a></li>
+    <li class="menu__item"><a class="menu__link scrollto" href="{% url 'home' %}program">{% translate 'Послуги' %}</a></li>
+    <li class="menu__item"><a class="menu__link scrollto" href="{% url 'home' %}#review">{% translate 'Відгуки' %}</a></li>
+    <li class="menu__item"><a class="menu__link scrollto" href="{% url 'home' %}#experience">{% translate 'Корисна інформація' %}</a></li>
+    <li class="menu__item"><a class="menu__link scrollto" href="#footer">{% translate 'Контакти' %}</a></li>
+  </ul>
+{% endblock %}
+
+
+
+{% block main %}
+<section class="questionnaire section">
+  <div class="container questionnaire__container">
+    <h1 class="questionnaire__title">
+      {% translate 'Анкета для працевлаштування медсестри' %}
+    </h1>
+
+    <form
+      class="form"
+      method="post"
+      novalidate
+      action="{% url 'fill_form' %}"
+      id="questionnaire__form"
+    >
+      {% csrf_token %} {{ form.non_field_errors }}
+
+      <div class="form__personal">
+        <label for="{{ form.name.id_for_label }}" class="form__label">
+          <p class="form__text">
+            {{ form.name.label }} <span class="required-star">*</span>:
+          </p>
+          <ul class="errors"></ul>
+          {{ form.name }}
+        </label>
+
+        <label for="{{ form.latin_name.id_for_label }}" class="form__label">
+          <p class="form__text">
+            {{ form.latin_name.label }}
+            <span class="form__clarification">
+              {% blocktranslate %} (латиницею, як в закордонному паспорті)
+              {% endblocktranslate %}
+            </span>
+            <span class="required-star">*</span>:
+          </p>
+          <ul class="errors"></ul>
+          {{ form.latin_name }}
+        </label>
+
+        <label for="{{ form.maiden_name.id_for_label }}" class="form__label">
+          <p class="form__text">{{ form.maiden_name.label }}:</p>
+          <ul class="errors"></ul>
+          {{ form.maiden_name }}
+        </label>
+
+        <label for="{{ form.nationality.id_for_label }}" class="form__label">
+          <p class="form__text">
+            {{ form.nationality.label }} <span class="required-star">*</span>:
+          </p>
+          <ul class="errors"></ul>
+          {{ form.nationality }}
+        </label>
+
+        <label
+          for="{{ form.registration_address.id_for_label }}"
+          class="form__label"
+        >
+          <p class="form__text">
+            {{ form.registration_address.label }}
+            <span class="required-star">*</span>:
+          </p>
+          <ul class="errors"></ul>
+          {{ form.registration_address }}
+        </label>
+
+        <label
+          for="{{ form.current_address.id_for_label }}"
+          class="form__label"
+        >
+          <p class="form__text">
+            {{ form.current_address.label }}
+            <span class="required-star">*</span>:
+          </p>
+          <ul class="errors"></ul>
+          {{ form.current_address }}
+        </label>
+
+        <label for="{{ form.marital_status.id_for_label }}" class="form__label">
+          <p class="form__text">{{ form.marital_status.label }}:</p>
+          <ul class="errors"></ul>
+          {{ form.marital_status }}
+        </label>
+
+        <label for="{{ form.phone.id_for_label }}" class="form__label">
+          <p class="form__text">
+            {{ form.phone.label }} <span class="required-star">*</span>:
+          </p>
+          <ul class="errors"></ul>
+          {{ form.phone }}
+        </label>
+
+        <label for="{{ form.email.id_for_label }}" class="form__label">
+          <p class="form__text">
+            {{ form.email.label }} <span class="required-star">*</span>:
+          </p>
+          <ul class="errors"></ul>
+          {{ form.email }}
+        </label>
+
+        <label for="{{ form.date_of_birth.id_for_label }}" class="form__label">
+          <p class="form__text">
+            {{ form.date_of_birth.label }} <span class="required-star">*</span>:
+          </p>
+          <ul class="errors"></ul>
+          <div class="form__date">{{ form.date_of_birth }}</div>
+        </label>
+
+        <label for="{{ form.skype.id_for_label }}" class="form__label">
+          <p class="form__text">{{ form.skype.label }}:</p>
+          <ul class="errors"></ul>
+          {{ form.skype }}
+        </label>
+      </div>
+
+      <h2 class="form__education--title">{% translate "Освіта" %}</h2>
+
+      {{ formset.management_form }}
+      {% for education_form in formset %}
+        {% include "inc/_education_form.html" %}
+      {% endfor %}
+
+      <div class="extra__education-form"></div>
+
+      <button type="button" class="button form__add-education">{% translate "Додати" %}</button>
+
+      <div class="form__experience">
+        <label for="{{ form.experience.id_for_label }}" class="form__label">
+          <p class="form__text">
+            {{ form.experience.label }} <span class="required-star">*</span>:
+          </p>
+          <ul class="errors"></ul>
+          {{ form.experience }}
+        </label>
+
+        <label
+          for="{{ form.professional_skills.id_for_label }}"
+          class="form__label"
+        >
+          <p class="form__text">
+            {{ form.professional_skills.label }}
+            <span class="form__clarification">
+              {% blocktranslate %} (якими методиками, маніпуляціями володієте)
+              {% endblocktranslate %}
+            </span>
+            <span class="required-star">*</span>:
+          </p>
+          <ul class="errors"></ul>
+          {{ form.professional_skills }}
+        </label>
+
+        <label for="{{ form.about.id_for_label }}" class="form__label">
+          <p class="form__text">
+            {{ form.about.label }}
+            <span class="form__clarification">
+              {% blocktranslate %} (коротко про основні якості, уподобання,
+              прагнення; чому бажаєте працювати у Німеччині)
+              {% endblocktranslate %}
+            </span>
+            <span class="required-star">*</span>:
+          </p>
+          <ul class="errors"></ul>
+          {{ form.about }}
+        </label>
+
+        <label
+          for="{{ form.further_education.id_for_label }}"
+          class="form__label"
+        >
+          <p class="form__text">{{ form.further_education.label }}:</p>
+          <ul class="errors"></ul>
+          {{ form.further_education }}
+        </label>
+
+        <label for="{{ form.languages.id_for_label }}" class="form__label">
+          <p class="form__text">
+            {{ form.languages.label }}
+            <span class="form__clarification"
+              >{% translate "(вказати рівень)" %}</span
+            >
+            <span class="required-star">*</span>:
+          </p>
+          <ul class="errors"></ul>
+          {{ form.languages }}
+        </label>
+
+        <label
+          for="{{ form.has_driver_license.id_for_label }}"
+          class="form__label form__is-driver"
+        >
+          <p class="form__text">{{ form.has_driver_license.label }}:</p>
+          <ul class="errors"></ul>
+          {{ form.has_driver_license }}
+        </label>
+      </div>
+
+      <label
+        for="{{ form.full_name.id_for_label }}"
+        class="form__label form__fullname--policy"
+      >
+        <ul class="errors"></ul>
+        <p class="form__policy">
+          <span class="required-star">*</span>
+
+          {% blocktranslate with form.full_name as full_name %}
+          Я, {{ full_name }}, шляхом заповнення даної анкети, відповідно до Закону України «Про
+          захист персональних даних від «01» червня 2010 року, №2297-VІ надаю
+          згоду ТОВ «Воркконсалт» на обробку моїх особистих персональних даних,
+          що будуть використані виключно з метою надання консультативних послуг
+          в сфері працевлаштування.
+          {% endblocktranslate %}
+        </p>
+      </label>
+
+      <button class="button form__button" type="submit">
+        {% translate 'Відправити'%}
+      </button>
+    </form>
+  </div>
+</section>
+<div id="empty-form" class="is-hidden">{% include "inc/_education_form.html" with education_form=formset.empty_form %}</div>
+{% endblock %}
+
+
+{% block popup %}
+<div class="backdrop is-hidden">
+  <div class="popup">
+    <p class="popup__message">{% translate 'Запит надіслано!' %}</p>
+    <button class="popup__button">
+      <svg class="popup__close">
+        <use
+          href="{% static 'main/images/icons/sprite.svg' %}#icon-close"
+        ></use>
+      </svg>
+    </button>
+  </div>
+</div>
+{% endblock %}
+
+
+
+{% block links %}
+<script src="{% static 'main/js/form.js' %}" crossorigin="anonymous"></script>
+{% endblock %}

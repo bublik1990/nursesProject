@@ -1,0 +1,169 @@
+{% load i18n %}
+{% load static %}
+{% load compress %}
+
+<header class="header" id="header">
+    <div class="container">
+
+      <div class="header__component">
+
+        <a class="logo header__logo" href="{% url 'home' %}">
+          <img class="logo__image" src="{% static 'main/images/logo.png' %}" alt="{% translate 'Логотип Workconsult' %}" width="220">
+        </a>
+
+        <ul class="header__connection connection">
+          <li class="connection__item">
+            <address class="header__address">
+              <svg class="header__icon" width="40" height="40">
+                <use class="" href="{% static 'main/images/icons/sprite.svg' %}#icon-location"></use>
+              </svg>
+              {% translate 'Полтава, вул. Соборності 46В' %}
+            </address>
+          </li>
+          <li class="connection__item">
+            <a class="header__tel" href="tel:+380967739355">
+              <svg class="header__icon" width="40" height="40">
+                <use class="" href="{% static 'main/images/icons/sprite.svg' %}#icon-tel"></use>
+              </svg>
+              096 773 93 55
+            </a>
+          </li>
+        </ul>
+
+        <ul class="header__social social">
+          <li class="social__item">
+            <a class="social__link" href="https://www.facebook.com/workconsult.ukraine" target="_blank">
+
+              <svg class="social__image" aria-label="{% translate 'Соціальна мережа компанії Facebook' %}">
+                <use href="{% static 'main/images/icons/sprite.svg' %}#icon-facebook"></use>
+              </svg>
+
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://www.instagram.com/workconsult.ukraine/" target="_blank">
+
+              <svg class="social__image" aria-label="{% translate 'Соціальна мережа компанії Instagram' %}">
+                <use href="{% static 'main/images/icons/sprite.svg' %}#icon-instagram"></use>
+              </svg>
+
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+
+              <svg class="social__image" aria-label="{% translate 'Соціальна мережа компанії LinkedIn' %}">
+                <use href="{% static 'main/images/icons/sprite.svg' %}#icon-linkedin"></use>
+              </svg>
+
+            </a>
+          </li>
+        </ul>
+
+        <div class="header__toggle">
+
+          <div class="header__internationalization">
+            <button class="switch__button current__language">
+                <svg class="switch__svg" width="37" height="37">
+                    <use data-lang="uk" class="icon" href="{% static 'main/images/icons/sprite.svg' %}#icon-{{ CURRENT_LANGUAGE }}"></use>
+                </svg>
+            </button>
+
+            <form class="internationalization__form" action="{% url 'set_language' %}" method="post">
+              {% csrf_token %}
+              <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+              <ul class="internationalization__list">
+
+
+              {% for language in languages %}
+                {% if not language.code == CURRENT_LANGUAGE %}
+
+                  <li class="internationalization__item">
+                    <button type="submit"
+                            name="language"
+                            value="{{ language.code }}"
+                            class="switch__button">
+                        <svg class="switch__svg" width="37" height="37">
+                            <use data-lang="uk" class="icon icon-ukr" href="{% static 'main/images/icons/sprite.svg' %}#icon-{{ language.code }}"></use>
+                        </svg>
+                    </button>
+                  </li>
+
+                {% endif %}
+              {% endfor %}
+              </ul>
+            </form>
+
+          </div>
+
+
+
+            <form class="internationalization__form--desktop" action="{% url 'set_language' %}" method="post">
+              {% csrf_token %}
+              <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+              <ul class="internationalization__list">
+
+
+              {% for language in languages %}
+
+                  <li class="internationalization__item">
+                    <button type="submit"
+                            name="language"
+                            value="{{ language.code }}"
+                            class="switch__button {% if language.code == CURRENT_LANGUAGE %} current__language {% endif %}">
+                               {{ language.code|upper }}
+
+                    </button>
+                  </li>
+
+              {% endfor %}
+              </ul>
+            </form>
+
+
+          <button type="button" class="switch__button burger__button" aria-expanded="false" data-burger-button>
+            <svg class="switch__svg" width="55" height="55" aria-labelledby="{% translate 'Відкрити мобільне меню' %}">
+              <use class="icon-menu" href="{% static 'main/images/icons/sprite.svg' %}#icon-burger"></use>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="header__block">
+      <div class="container header__wrap">
+
+        <a class="header__tel" href="tel:+380967739355">
+          <svg class="header__icon" width="45" height="45">
+            <use class="" href="{% static 'main/images/icons/sprite.svg' %}#icon-tel"></use>
+          </svg>096 773 93 55
+        </a>
+
+      </div>
+
+      <nav class="header__navigation container">
+
+        <button type="button" class="switch__button close__button" aria-expanded="true" data-close-button>
+          <svg class="switch__svg" width="20" height="20" aria-labelledby="{% translate 'Закрити мобільне меню' %}">
+            <use class="icon-close" href="{% static 'main/images/icons/sprite.svg' %}#icon-close"></use>
+          </svg>
+        </button>
+
+        {% block header_menu %}
+        <ul class="header__list menu">
+          <li class="menu__item"><a class="menu__link scrollto" href="{% url 'home' %}">{% translate 'Головна' %}</a></li>
+          <li class="menu__item"><a class="menu__link scrollto" href="#about">{% translate 'Про нас' %}</a></li>
+          <li class="menu__item"><a class="menu__link scrollto" href="#program">{% translate 'Послуги' %}</a></li>
+          <li class="menu__item"><a class="menu__link scrollto" href="#review">{% translate 'Відгуки' %}</a></li>
+          <li class="menu__item"><a class="menu__link scrollto" href="#experience">{% translate 'Корисна інформація' %}</a></li>
+          <li class="menu__item"><a class="menu__link scrollto" href="#footer">{% translate 'Контакти' %}</a></li>
+        </ul>
+        {% endblock %}
+
+        <a class="button button--accent header__button" href="/form">{% translate 'Заповнити форму' %}</a>
+      </nav>
+    </div>
+
+  </header>

@@ -1,0 +1,264 @@
+.program {
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: $section-background-color;
+}
+
+.program__container {
+  @media screen and (min-width: $tablet-breakpoint) {
+    padding-left: 74px;
+    padding-right: 74px;
+  }
+}
+
+.program__pretitle-text {
+  font-size: 13px;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    font-size: 17px;
+  }
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    padding-left: 120px;
+    padding-right: 120px;
+    line-height: 1.7;
+  }
+}
+
+.program__title {
+  margin-top: 20px;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    margin-top: 25px;
+  }
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    margin-top: 33px;
+  }
+}
+
+.program__posttitle-text {
+  margin-top: 20px;
+  font-size: 13px;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    margin-top: 25px;
+    font-size: 17px;
+  }
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    margin-top: 33px;
+  }
+}
+
+.programm__block {
+  position: relative;
+  overflow: hidden;
+}
+
+.program__body {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 170px;
+  text-align: left;
+  font-size: 13px;
+
+  @media screen and (min-width: 340px) {
+    width: 215px;
+  }
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    margin-top: 40px;
+    width: auto;
+    font-size: 17px;
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin-top: 30px;
+  }
+}
+
+.program__phase {
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+
+  &::before {
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 1;
+    color: $brand-color;
+  }
+
+  &::after {
+    position: absolute;
+    top: 75px;
+    display: block;
+    height: 1px;
+    width: 80%;
+    background-color: $brand-color;
+    content: '';
+  }
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+.program__phase:nth-child(n + 3) {
+  @media screen and (min-width: $tablet-breakpoint) {
+    margin-top: 30px;
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin-top: 0;
+  }
+}
+
+.program__phase:first-child::before {
+  content: '1';
+}
+
+.program__phase:nth-child(2)::before {
+  content: '2';
+}
+
+.program__phase:nth-child(3)::before {
+  content: '3';
+}
+
+.program__phase:nth-child(4)::before {
+  content: '4';
+}
+
+.program__phase.is-active {
+  position: relative;
+  transform: translateX(0);
+  visibility: visible;
+  transition: 250ms linear;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    transition: none;
+  }
+}
+
+.program__phase--width {
+  width: auto;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    width: calc((100% - 100px) / 2);
+    height: auto;
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    width: calc((100% - 210px) / 4);
+  }
+}
+
+.phase__title {
+   margin-top: 22px;
+   font-size: 18px;
+   color: $brand-color;
+}
+
+.program__phase-list {
+  margin-top: 20px;
+}
+
+.program__phase-item {
+  line-height: 1.7;
+
+  &::before {
+    position: relative;
+    margin-right: 10px;
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    vertical-align: middle;
+    background-color: $black-color;
+    content: '';
+  }
+}
+
+.program__phase-item:not(:first-child) {
+  margin-top: 5px;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    margin-top: 15px;
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin-top: 20px;
+  }
+}
+
+.program__wrap {
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin-top: 20px;
+  }
+}
+
+ .program__phase-item strong {
+   font-weight: 600;
+ }
+
+.program__more {
+  font-weight: 600;
+  color: $brand-color;
+
+  &:focus,
+  &:hover {
+    border-bottom: 1px solid $brand-color;
+  }
+}
+
+.program__button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  //padding-left: 0;
+  padding-right: 13px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  transition: 250ms linear;
+
+  //&:focus,
+  &:hover,
+  &:active {
+    transform: translateY(-50%) scale(1.2);
+  }
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    display: none;
+  }
+}
+
+.program__button .arrow-button {
+  width: 25px;
+  height: 25px;
+}
+
+.gutter-sizer {
+  width: 0;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    width: 100px;
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    width: 70px;
+  }
+}

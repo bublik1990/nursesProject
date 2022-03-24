@@ -1,0 +1,196 @@
+.todo__container {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.todo__header {
+    text-align: center;
+}
+
+.todo__button {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.todo__arrow-btn .arrow-button {
+  width: 20px;
+  height: 20px;
+}
+
+.todo__title {
+  margin-top: 25px;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    margin-top: 30px;
+    padding-left: 95px;
+    padding-right: 95px;
+  }
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    margin-top: 40px;
+  }
+}
+
+.todo__tabs-wrap {
+  margin-top: 35px;
+  margin-top: 20px;
+  background-color: $section-background-color;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    margin-top: 30px;
+  }
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    margin-top: 40px;
+  }
+}
+
+.todo__tabs-container {
+  margin-left: 25px;
+  margin-right: 25px;
+  position: relative;
+  text-align: center;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.todo__tabs {
+  margin-left: 30px;
+  margin-right: 30px;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    font-size: 22px;
+  }
+}
+
+.todo__tabs-btn {
+  width: 100%;
+  height: 45px;
+  display: none;
+  cursor: pointer;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    height: 70px;
+  }
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    width: calc(100% / 3);
+    height: 85px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+  }
+}
+
+.todo__tabs-btn.tabs-btn--active {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.tabs-btn--active::after {
+  @media screen and (min-width: $netbook-breakpoint) {
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    bottom: -1px;
+    content: '';
+    border-radius: 3px;
+    background-color: $brand-color;
+  }
+}
+
+.todo__arrow-btn {
+  padding: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  //outline: none;
+  border: none;
+  background-color: transparent;
+  color: $first-shadow-color;
+  cursor: pointer;
+  transition: 250ms linear;
+
+  //&:focus,
+  &:hover,
+  &:active {
+    transform: scale(1.2);
+  }
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    display: none;
+  }
+}
+
+.todo__left-bnt {
+  left: 0;
+  padding-left: 15px;
+  padding-right: 5px;
+}
+
+.todo__right-bnt {
+  right: 0;
+  padding-right: 15px;
+  padding-left: 5px;
+}
+
+.todo__list-container {
+  padding-top: 15px;
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    padding-top: 40px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
+.todo__list {
+  // line-height: 1.4;
+}
+
+.todo__item {
+  //display: none;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.todo__item.is-open {
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+  transition: 500ms linear;
+}
+
+.todo__item-text {
+  white-space: pre-line;
+}

@@ -1,0 +1,111 @@
+.appeal {
+  padding-top: 0;
+}
+
+.appeal__form {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 35px;
+  padding-bottom: 40px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 18px 0px $third-shadow-color;
+  background-color: $white-color;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    padding-left: 55px;
+    padding-right: 55px;
+    position: absolute;
+    left: 50%;
+    bottom: -70px;
+    transform: translateX(-50%);
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: initial;
+    transform: initial;
+  }
+}
+
+.appeal__title {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: center;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    font-size: 17px;
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    text-align: left;
+    font-size: 18px;
+  }
+}
+
+.appeal__items {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin-top: 0;
+    margin-left: 65px;
+  }
+}
+
+.appeal__button {
+  // display: block;
+  // height: 55px;
+  width: 90%;
+  max-width: 220px;
+  // padding-left: 10px;
+  // padding-right: 10px;
+  // border: none;
+  // border-radius: 13px;
+  // cursor: pointer;
+  // background-image: linear-gradient(to top left, $first-accent-btn-color, $second-accent-btn-color);
+  // white-space: nowrap;
+  // font-weight: 700;
+  // font-size: 15px;
+  // white-space: normal;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    min-width: 240px;
+    font-size: 17px;
+  }
+}
+
+.appeal__button:not(:first-child) {
+  margin-top: 20px;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    margin-top: 0;
+    margin-left: 30px;
+  }
+}
+
+.appeal__container {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    padding-top: 130px;
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    padding-top: 0;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}

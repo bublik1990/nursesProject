@@ -1,0 +1,714 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-24 21:56+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\nurses\settings.py:166
+msgid "Ukrainian"
+msgstr ""
+
+#: .\nurses\settings.py:167
+msgid "Russian"
+msgstr ""
+
+#: .\templates\main\base.html:16
+msgid "Робота у Німеччині"
+msgstr ""
+
+#: .\templates\main\form.html:10
+msgid "Анкета для працевлаштування медсестри"
+msgstr ""
+
+#: .\templates\main\form.html:35
+msgid ""
+" (латиницею, як в закордонному паспорті)\n"
+"              "
+msgstr ""
+
+#: .\templates\main\form.html:119
+msgid "Освіта"
+msgstr ""
+
+#: .\templates\main\form.html:128
+msgid "Додати"
+msgstr ""
+
+#: .\templates\main\form.html:146
+msgid ""
+" (якими методиками, маніпуляціями володієте)\n"
+"              "
+msgstr ""
+
+#: .\templates\main\form.html:159
+msgid ""
+" (коротко про основні якості, уподобання,\n"
+"              прагнення; чому бажаєте працювати у Німеччині)\n"
+"              "
+msgstr ""
+
+#: .\templates\main\form.html:182
+msgid "(вказати рівень)"
+msgstr ""
+
+#: .\templates\main\form.html:208
+#, python-format
+msgid ""
+"\n"
+"          Я, %(full_name)s, шляхом заповнення даної анкети, відповідно до "
+"Закону України «Про\n"
+"          захист персональних даних від «01» червня 2010 року, №2297-VІ "
+"надаю\n"
+"          згоду ТОВ «Воркконсалт» на обробку моїх особистих персональних "
+"даних,\n"
+"          що будуть використані виключно з метою надання консультативних "
+"послуг\n"
+"          в сфері працевлаштування.\n"
+"          "
+msgstr ""
+
+#: .\templates\main\form.html:219 .\templates\main\index.html:66
+msgid "Відправити"
+msgstr ""
+
+#: .\templates\main\form.html:234 .\templates\main\index.html:884
+msgid "Запит надіслано!"
+msgstr ""
+
+#: .\templates\main\inc\_footer.html:10 .\templates\main\inc\_footer.html:83
+msgid "ТОВ “Воркконсалт”"
+msgstr ""
+
+#: .\templates\main\inc\_footer.html:11 .\templates\main\inc\_footer.html:84
+msgid "36000, Україна, м. Полтава, вул. Соборності, 50"
+msgstr ""
+
+#: .\templates\main\inc\_footer.html:12
+msgid "Телефон"
+msgstr ""
+
+#: .\templates\main\inc\_footer.html:27 .\templates\main\inc\_footer.html:98
+msgid "Медаль лідер року"
+msgstr ""
+
+#: .\templates\main\inc\_footer.html:34 .\templates\main\inc\_footer.html:105
+msgid "Медаль вибір споживача"
+msgstr ""
+
+#: .\templates\main\inc\_footer.html:41 .\templates\main\inc\_footer.html:112
+msgid "Золота медаль"
+msgstr ""
+
+#: .\templates\main\inc\_footer.html:50 .\templates\main\inc\_footer.html:123
+#: .\templates\main\inc\_header.html:37
+msgid "Соціальна мережа компанії Facebook"
+msgstr ""
+
+#: .\templates\main\inc\_footer.html:59 .\templates\main\inc\_footer.html:132
+#: .\templates\main\inc\_header.html:46
+msgid "Соціальна мережа компанії Instagram"
+msgstr ""
+
+#: .\templates\main\inc\_footer.html:68 .\templates\main\inc\_footer.html:141
+#: .\templates\main\inc\_header.html:55
+msgid "Соціальна мережа компанії LinkedIn"
+msgstr ""
+
+#: .\templates\main\inc\_footer.html:85
+msgid "Телефон:"
+msgstr ""
+
+#: .\templates\main\inc\_footer.html:152
+msgid "Логотип компанії go4more"
+msgstr ""
+
+#: .\templates\main\inc\_footer.html:158
+msgid "Логотип компанії WorkConsult"
+msgstr ""
+
+#: .\templates\main\inc\_header.html:11
+msgid "Логотип Workconsult"
+msgstr ""
+
+#: .\templates\main\inc\_header.html:20
+msgid "Полтава, вул. Соборності 46В"
+msgstr ""
+
+#: .\templates\main\inc\_header.html:125
+msgid "Відкрити мобільне меню"
+msgstr ""
+
+#: .\templates\main\inc\_header.html:149
+msgid "Закрити мобільне меню"
+msgstr ""
+
+#: .\templates\main\inc\_header.html:155
+msgid "Головна"
+msgstr ""
+
+#: .\templates\main\inc\_header.html:156
+msgid "Про нас"
+msgstr ""
+
+#: .\templates\main\inc\_header.html:157
+msgid "Послуги"
+msgstr ""
+
+#: .\templates\main\inc\_header.html:158 .\templates\main\index.html:645
+#: .\templates\main\index.html:702
+msgid "Відгуки"
+msgstr ""
+
+#: .\templates\main\inc\_header.html:159
+msgid "Корисна інформація"
+msgstr ""
+
+#: .\templates\main\inc\_header.html:160
+msgid "Контакти"
+msgstr ""
+
+#: .\templates\main\inc\_header.html:163 .\templates\main\index.html:246
+#: .\templates\main\index.html:869
+msgid "Заповнити форму"
+msgstr ""
+
+#: .\templates\main\index.html:26
+msgid "Медсестри"
+msgstr ""
+
+#: .\templates\main\index.html:30
+msgid "Шукаєте роботу медсестрою?"
+msgstr ""
+
+#: .\templates\main\index.html:31
+msgid "Залишайте заявку і наші менеджери Вам допоможуть!"
+msgstr ""
+
+#: .\templates\main\index.html:74
+msgid "Безкоштовне працевлаштування медичного персоналу у Німеччині"
+msgstr ""
+
+#: .\templates\main\index.html:82
+msgid ""
+"\n"
+"        Важлива інформація для медсестер, які зараз знаходяться у країнах "
+"Європи або планують виїхати з України!\n"
+"        "
+msgstr ""
+
+#: .\templates\main\index.html:87
+msgid ""
+"\n"
+"        Якщо Ви бажаєте працювати за фахом у Німеччині, ми готові "
+"забезпечити:\n"
+"        "
+msgstr ""
+
+#: .\templates\main\index.html:93
+msgid ""
+"\n"
+"          житло у Німеччині\n"
+"          "
+msgstr ""
+
+#: .\templates\main\index.html:99
+msgid ""
+"\n"
+"          курси німецької мови\n"
+"          "
+msgstr ""
+
+#: .\templates\main\index.html:105
+msgid ""
+"\n"
+"          проходження практики\n"
+"          "
+msgstr ""
+
+#: .\templates\main\index.html:111
+msgid ""
+"\n"
+"          офіційне працевлаштування в медичних закладах Німеччини\n"
+"          "
+msgstr ""
+
+#: .\templates\main\index.html:117
+msgid ""
+"\n"
+"        Вимоги до українських медсестер:\n"
+"        "
+msgstr ""
+
+#: .\templates\main\index.html:124
+msgid ""
+"\n"
+"          диплом \"Сестринська справа\"\n"
+"          "
+msgstr ""
+
+#: .\templates\main\index.html:130
+msgid ""
+"\n"
+"          бажання навчатись і працювати\n"
+"          "
+msgstr ""
+
+#: .\templates\main\index.html:138
+msgid ""
+"\n"
+"        Послуги компанії є безкоштовними!\n"
+"        "
+msgstr ""
+
+#: .\templates\main\index.html:148
+msgid "Хто ми?"
+msgstr ""
+
+#: .\templates\main\index.html:151
+msgid ""
+"Workconsult - німецько-українська компанія, що діє в Україні з 2016 року. "
+"Одним з головних напрямків нашої діяльності є підготовка та працевлаштування "
+"спеціалістів у німецькомовних країнах. Серед наших партнерів – великі мережі "
+"медичних закладів по всій Німеччині та німецькі агенства з працевлаштування "
+"медичного персоналу. Підтвердженням нашої надійності є багаторічний досвід "
+"роботи у Німеччині, Австрії та на Філіппінах."
+msgstr ""
+
+#: .\templates\main\index.html:157
+msgid "Вибір країни"
+msgstr ""
+
+#: .\templates\main\index.html:161
+msgid "Головний сайт компанії"
+msgstr ""
+
+#: .\templates\main\index.html:168
+msgid "Відео інформація про програму"
+msgstr ""
+
+#: .\templates\main\index.html:178
+msgid ""
+"Компанія Workconsult разом з німецькими партнерами пропонує медсестрам та\n"
+"        медбратам України безкоштовний повний цикл підготовки та "
+"працевлаштування у Німеччині"
+msgstr ""
+
+#: .\templates\main\index.html:180
+msgid "Що включає програма?"
+msgstr ""
+
+#: .\templates\main\index.html:181
+msgid ""
+"Наша програма фінансується роботодавцями, тому є безкоштовною для "
+"українських медсестер"
+msgstr ""
+
+#: .\templates\main\index.html:189
+msgid ""
+"Онлайн-курс німецької мови, що проводиться на базі нашої сучасної школи\n"
+"                go4more.School."
+msgstr ""
+
+#: .\templates\main\index.html:195
+msgid "Детальніше про нашу мовну школу."
+msgstr ""
+
+#: .\templates\main\index.html:198
+msgid "Тривалість курсу приблизно 12 місяців."
+msgstr ""
+
+#: .\templates\main\index.html:199
+msgid ""
+"Підготовка до мовного іспиту (рівень В2). <strong>Складення іспиту "
+"оплачується роботодавцем</strong>"
+msgstr ""
+
+#: .\templates\main\index.html:200
+msgid "Додаткові курси з медичною термінологією."
+msgstr ""
+
+#: .\templates\main\index.html:207
+msgid "Підготовка до іспиту на професійні знання та здача іспиту."
+msgstr ""
+
+#: .\templates\main\index.html:208
+msgid "Заняття з підготовки також проходять онлайн."
+msgstr ""
+
+#: .\templates\main\index.html:215
+msgid "Оформлення, переклад та засвідчення документів."
+msgstr ""
+
+#: .\templates\main\index.html:216
+msgid ""
+"Авіапереліт. <strong>Вартість квитка компенсується роботодавцем.</strong>"
+msgstr ""
+
+#: .\templates\main\index.html:217
+msgid "Допомога при поселенні."
+msgstr ""
+
+#: .\templates\main\index.html:224
+msgid "Підбір вакансій відповідно до Вашого рівня кваліфікації."
+msgstr ""
+
+#: .\templates\main\index.html:225
+msgid "Організація співбесіди з майбутніми роботодавцями."
+msgstr ""
+
+#: .\templates\main\index.html:226
+msgid "За необхідності проходження оплачуваної практики на базі роботодавця."
+msgstr ""
+
+#: .\templates\main\index.html:227
+msgid "Офіційне працевлаштування у медичних закладах Німеччини."
+msgstr ""
+
+#: .\templates\main\index.html:247
+msgid "Що потрібно, щоб працювати медсестрою у Німеччині?"
+msgstr ""
+
+#: .\templates\main\index.html:256
+msgid "Знання німецької:"
+msgstr ""
+
+#: .\templates\main\index.html:259
+msgid "Визнання кваліфікації:"
+msgstr ""
+
+#: .\templates\main\index.html:262
+msgid "Практика:"
+msgstr ""
+
+#: .\templates\main\index.html:267
+msgid "Прогорнути вліво"
+msgstr ""
+
+#: .\templates\main\index.html:271
+msgid "Прогорнути вправо"
+msgstr ""
+
+#: .\templates\main\index.html:283
+msgid ""
+"Ви повинні мати рівень В2 з німецької мови для того, щоб працювати медсетрою "
+"у Німеччині. Цей рівень можна підтвердити здавши іспит у міжнародній "
+"організації (Goethe-Institut, ÖSD тощо) і отримавши відповідний сертифікат. "
+"У нашій мовній школі ми навчимо Вас німецькій мові і підготуємо до здачі "
+"іспиту. Курси та здача іспиту оплачуються роботодавцем."
+msgstr ""
+
+#: .\templates\main\index.html:288
+msgid ""
+"Навчальні програми для медсестер Німеччини та України відрізняються, тому "
+"для отримання права працювати Вам необхідно підтвердити відповідність рівню "
+"Вашої  кваліфікації німецьким стандартам.\n"
+"\n"
+"  Для визнання кваліфікації обирається один з двох варіантів.\n"
+"\n"
+"  Перший варіант - складення іспиту на професійні знання у відповідному "
+"центрі  перепідготовки медперсоналу в Німеччині. Наша команда підготує Вас "
+"до іспиту і організує його проведення.\n"
+"\n"
+"  Другий варіант – проходження оплачуваної практики у роботодавця. По "
+"завершенні Ви замість кваліфікаційного іспиту проходете інтерв'ю за "
+"програмою практичного курсу. Найчастіше перевага надається саме другому "
+"варіанту.\n"
+"  "
+msgstr ""
+
+#: .\templates\main\index.html:299
+msgid ""
+"Найбільш ефективним способом визнання кваліфікації є інтеграційна практика в "
+"якості помічника медсестри. Практика проходить у медичному закладі "
+"роботодавця і зазвичай становить 6-8 місяців. За цей час Ви поступово "
+"адаптуєтеся до німецькомовного професійного середовища. Протягом всієї "
+"практики Ви отримуєте заробітну плату (від 1200 євро і більше). По "
+"завершенні практики Ви зможете працювати медсестрою в тому ж самому "
+"закладі.\n"
+"\n"
+"  У більшості клінік є власні гуртожитки, де Ви зможете мешкати безкоштовно "
+"або за вартістю нижче ринкової. Ми та наші партнери допоможемо Вам у "
+"вирішенні всіх питань з житлом.\n"
+"  "
+msgstr ""
+
+#: .\templates\main\index.html:313
+msgid "Курс німецької"
+msgstr ""
+
+#: .\templates\main\index.html:323
+msgid ""
+"\n"
+"        Мовна підготовка проходить на базі онлайн-школи компанії Workconsult-"
+"go4more.School, де професійні викладачі з сертифікованим рівнем володіння "
+"німецькою мовою С1-С2 за 12 місяців навчання пройдуть шлях зі студентом від "
+"початківця до B2.\n"
+"        "
+msgstr ""
+
+#: .\templates\main\index.html:337
+msgid "Вимоги до кандидатів"
+msgstr ""
+
+#: .\templates\main\index.html:340
+msgid "Кандидат повинен:"
+msgstr ""
+
+#: .\templates\main\index.html:343
+msgid ""
+"\n"
+"            мати освіту за спеціалізацією «Сестринська справа» або бути "
+"студентом останніх курсів цієї спеціальності\n"
+"            "
+msgstr ""
+
+#: .\templates\main\index.html:348
+msgid ""
+"\n"
+"            надати необхідні документи: диплом (за наявності) чи довідку про "
+"навчання, коротку автобіографію, довідку про несудимість, сертифікат про "
+"рівень володіння мовою, якщо є.\n"
+"            "
+msgstr ""
+
+#: .\templates\main\index.html:353
+msgid ""
+"\n"
+"            регулярно і вчасно відвідувати онлайн-заняття з німецької мови "
+"та отримати сертифікат рівня В2 по завершенні курсу.\n"
+"            "
+msgstr ""
+
+#: .\templates\main\index.html:358
+msgid ""
+"\n"
+"            проходити курси підготовки до визнання професійної кваліфікації\n"
+"            "
+msgstr ""
+
+#: .\templates\main\index.html:363
+msgid ""
+"\n"
+"            відпрацювати у запропонованого роботодавця не менше 24 місяців, "
+"починаючи з моменту визнання кваліфікації у Німеччині.\n"
+"            "
+msgstr ""
+
+#: .\templates\main\index.html:376
+msgid "Чому саме Німеччина?"
+msgstr ""
+
+#: .\templates\main\index.html:382
+msgid ""
+"\n"
+"            В Німеччині дуже великий попит на кваліфікованих працівників з-"
+"за кордону.\n"
+"            "
+msgstr ""
+
+#: .\templates\main\index.html:387
+msgid ""
+"\n"
+"            Мінімальний валовий річний дохід у сестринській справі становить "
+"25 000 євро або приблизно 800 000 грн.\n"
+"            "
+msgstr ""
+
+#: .\templates\main\index.html:392
+msgid ""
+"\n"
+"            Розвинута інфраструктура, багато визначних пам'яток та музеїв\n"
+"            "
+msgstr ""
+
+#: .\templates\main\index.html:397
+msgid ""
+"\n"
+"            Високий рівень життя та показників соціального захисту населення "
+"для будь-якої категорії громадян.\n"
+"            "
+msgstr ""
+
+#: .\templates\main\index.html:402
+msgid ""
+"\n"
+"           Дотримання законів та значні штрафи за порушення суспільного "
+"порядку.\n"
+"           "
+msgstr ""
+
+#: .\templates\main\index.html:407
+msgid ""
+"\n"
+"            Особливе ставлення до екології - турбота про чистоту повітря і "
+"води, переробка відходів і боротьба зі шкідливими викидами.\n"
+"            "
+msgstr ""
+
+#: .\templates\main\index.html:412
+msgid ""
+"\n"
+"            Доброзичливість німців, які завжди ввічливі і толерантні.\n"
+"            "
+msgstr ""
+
+#: .\templates\main\index.html:417
+msgid ""
+"\n"
+"            Доступні ціни товарів першої необхідності і продуктів, строгий "
+"контроль їхньої якості.\n"
+"            "
+msgstr ""
+
+#: .\templates\main\index.html:422
+msgid ""
+"\n"
+"            Можливість отримання громадянства та постійного місця проживання "
+"при дотриманні правил проживання в Німеччині.\n"
+"            "
+msgstr ""
+
+#: .\templates\main\index.html:429
+msgid "Флаг у вигляді карти Німеччини"
+msgstr ""
+
+#: .\templates\main\index.html:438 .\templates\main\index.html:451
+#: .\templates\main\index.html:460 .\templates\main\index.html:469
+#: .\templates\main\index.html:478 .\templates\main\index.html:487
+#: .\templates\main\index.html:496 .\templates\main\index.html:575
+#: .\templates\main\index.html:583 .\templates\main\index.html:591
+#: .\templates\main\index.html:599 .\templates\main\index.html:612
+#: .\templates\main\index.html:620 .\templates\main\index.html:628
+#: .\templates\main\index.html:636
+msgid "Фото Німеччини"
+msgstr ""
+
+#: .\templates\main\index.html:511
+msgid "В чому переваги нашої програми?"
+msgstr ""
+
+#: .\templates\main\index.html:520
+msgid ""
+"\n"
+"            Наші курси – це захоплююча подорож з друзями та колегами.\n"
+"            "
+msgstr ""
+
+#: .\templates\main\index.html:525
+msgid ""
+"\n"
+"            Інтенсивний мовний курс триває 12-14 місяців. Щодня Вас будуть "
+"навчати професійні викладачі.\n"
+"            "
+msgstr ""
+
+#: .\templates\main\index.html:530
+msgid ""
+"\n"
+"            Окрім занять з викладачем Ви отримуєте доступ до навчальної "
+"платформи, де зможете самостійно займатись в будь-який час.\n"
+"            "
+msgstr ""
+
+#: .\templates\main\index.html:535
+msgid ""
+"\n"
+"            Програма включає підготовку до роботи у німецькомовному "
+"середовищі з медичною термінологією.\n"
+"            "
+msgstr ""
+
+#: .\templates\main\index.html:540
+msgid ""
+"\n"
+"            Мовний курс та працевлаштування є безкоштовними, якщо Ви "
+"виконуєте умови програми.\n"
+"            "
+msgstr ""
+
+#: .\templates\main\index.html:545
+msgid ""
+"\n"
+"            Обіцяємо, що Ви не залишитеся на самоті в жодному з етапів, адже "
+"ми всі - єдина команда!\n"
+"            "
+msgstr ""
+
+#: .\templates\main\index.html:550
+msgid ""
+"\n"
+"            Ми надаємо Вам шанс назавжди змінити своє життя на краще! Наша "
+"програма підготовки і працевлаштування - це чиста інвестиція у Ваше "
+"майбутнє.\n"
+"            "
+msgstr ""
+
+#: .\templates\main\index.html:565
+msgid "Заклади наших партнерів"
+msgstr ""
+
+#: .\templates\main\index.html:566
+msgid "Заклади наших партнерів ззовні"
+msgstr ""
+
+#: .\templates\main\index.html:604
+msgid "Заклади наших партнерів зсередини"
+msgstr ""
+
+#: .\templates\main\index.html:654 .\templates\main\index.html:657
+#: .\templates\main\index.html:660 .\templates\main\index.html:663
+#: .\templates\main\index.html:666 .\templates\main\index.html:669
+#: .\templates\main\index.html:672 .\templates\main\index.html:675
+#: .\templates\main\index.html:678 .\templates\main\index.html:681
+#: .\templates\main\index.html:684 .\templates\main\index.html:687
+msgid "Відгук"
+msgstr ""
+
+#: .\templates\main\index.html:757
+msgid "Наш досвід в інших країнах"
+msgstr ""
+
+#: .\templates\main\index.html:758
+msgid ""
+"Маючи позитивний досвід підготовки бiльш як 500 філіппінських медсестер, ми\n"
+"        гарантуємо, що успішне проходження програми вивчення німецької мови "
+"в запорукою отримання безцінного досвіду\n"
+"        роботи за фахом медичної сестри в Німеччині протягом двох років."
+msgstr ""
+
+#: .\templates\main\index.html:769 .\templates\main\index.html:776
+#: .\templates\main\index.html:783 .\templates\main\index.html:790
+msgid "Фото команди"
+msgstr ""
+
+#: .\templates\main\index.html:801
+msgid "Галерея WorkConsult"
+msgstr ""
+
+#: .\templates\main\index.html:813 .\templates\main\index.html:821
+#: .\templates\main\index.html:829 .\templates\main\index.html:837
+#: .\templates\main\index.html:845 .\templates\main\index.html:853
+msgid "Фото співробітників компанії"
+msgstr ""
+
+#: .\templates\main\index.html:867
+msgid ""
+"Заповнюйте анкету, або залишайте заявку і наші менеджери Вам допоможуть!"
+msgstr ""
+
+#: .\templates\main\index.html:870
+msgid "Замовити дзвінок"
+msgstr ""

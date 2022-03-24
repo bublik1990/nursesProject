@@ -1,0 +1,901 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+{% load static %}
+{% load compress %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{% static 'main/js/slick/slick/slick.css' %}">
+  <link rel="stylesheet" href="{% static 'main/js/slick/slick/slick-theme.css' %}">
+  <link type="text/x-scss" href="{% static 'main/sass/main.scss' %}" rel="stylesheet" media="screen">
+{% endblock %}
+
+{% block main %}
+
+  <section class="hero section">
+    <div class="container hero__container">
+
+      <div class="hero__wrap">
+        <img class="hero__banner" srcset="
+              {% static 'main/images/hero-banner-320.jpg' %} 320w,
+              {% static 'main/images/hero-banner-480.jpg' %} 480w,
+              {% static 'main/images/hero-banner-640.jpg' %} 640w,
+              {% static 'main/images/hero-banner-960.jpg' %} 960w,
+              {% static 'main/images/hero-banner-1280.jpg' %} 1280w,
+              {% static 'main/images/hero-banner-1440.jpg' %} 1440w,
+              {% static 'main/images/hero-banner-1600.jpg' %} 1600w,
+              {% static 'main/images/hero-banner-1920.jpg' %} 1920w
+            " src="{% static 'main/images/hero-banner.png' %}" alt="{% translate 'Медсестри' %}" sizes="">
+
+        <div class="hero__contact" id="hero__contact">
+          <div class="hero__description">
+            <p class="hero__subtitle">{% translate 'Шукаєте роботу медсестрою?' %}</p>
+            <p class="hero__text">{% translate 'Залишайте заявку і наші менеджери Вам допоможуть!' %}</p>
+          </div>
+
+          <form class="hero__form contact__form" method="post" id="contact__form" novalidate >
+
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+
+            <label for="{{ form.name.id_for_label }}" class="contact__element">
+              <p class="visually-hidden">{{ form.name.label }}:</p>
+              <ul class="errors"></ul>
+<!--              {% if form.name.errors %}-->
+<!--                <div class="error">{{ form.name.errors }}</div>-->
+<!--              {% endif %}-->
+              {{ form.name }}
+            </label>
+
+            <label for="{{ form.email.id_for_label }}" class="contact__element">
+              <p class="visually-hidden">{{ form.email.label }}:</p>
+              <ul class="errors"></ul>
+<!--              {% if form.email.errors %}-->
+<!--                <div class="error">{{ form.email.errors }}</div>-->
+<!--              {% endif %}-->
+              {{ form.email }}
+            </label>
+
+            <label for="{{ form.phone.id_for_label }}" class="contact__element">
+              <p class="visually-hidden">{{ form.phone.label }}:</p>
+              <ul class="errors"></ul>
+<!--              {% if form.phone.errors %}-->
+<!--                <div class="error">{{ form.phone.errors }}</div>-->
+<!--              {% endif %}-->
+              {{ form.phone }}
+            </label>
+
+            <button class="contact__element contact__submit button button--accent" type="submit">{% translate 'Відправити'%}</button>
+          </form>
+
+
+
+        </div>
+      </div>
+
+      <h1 class="hero__title">{% translate 'Безкоштовне працевлаштування медичного персоналу у Німеччині' %}</h1>
+    </div>
+
+  </section>
+
+  <section class="important">
+    <div class="container important__container">
+      <h2 class="important__title">
+        {% blocktranslate %}
+        Важлива інформація для медсестер, які зараз знаходяться у країнах Європи або планують виїхати з України!
+        {% endblocktranslate %}
+      </h2>
+      <p class="important__text">
+        {% blocktranslate %}
+        Якщо Ви бажаєте працювати за фахом у Німеччині, ми готові забезпечити:
+        {% endblocktranslate %}
+      </p>
+      <ul class="important__list">
+        <li class="important__item">
+          {% blocktranslate %}
+          житло у Німеччині
+          {% endblocktranslate %}
+        </li>
+
+        <li class="important__item">
+          {% blocktranslate %}
+          курси німецької мови
+          {% endblocktranslate %}
+        </li>
+
+        <li class="important__item">
+          {% blocktranslate %}
+          проходження практики
+          {% endblocktranslate %}
+        </li>
+
+        <li class="important__item">
+          {% blocktranslate %}
+          офіційне працевлаштування в медичних закладах Німеччини
+          {% endblocktranslate %}
+        </li>
+      </ul>
+      <p class="important__text">
+        {% blocktranslate %}
+        Вимоги до українських медсестер:
+        {% endblocktranslate %}
+      </p>
+
+      <ul class="important__list">
+        <li class="important__item">
+          {% blocktranslate %}
+          диплом "Сестринська справа"
+          {% endblocktranslate %}
+        </li>
+
+        <li class="important__item">
+          {% blocktranslate %}
+          бажання навчатись і працювати
+          {% endblocktranslate %}
+        </li>
+
+      </ul>
+
+      <p class="important__notice">
+        {% blocktranslate %}
+        Послуги компанії є безкоштовними!
+        {% endblocktranslate %}
+      </p>
+    </div>
+  </section>
+
+  <section class="about section" id="about">
+
+    <div class="container">
+      <h2 class="section__title about__title">{% translate 'Хто ми?' %}</h2>
+      <div class="about__content">
+
+        <p class="about__description">{% blocktranslate %}Workconsult - німецько-українська компанія, що діє в Україні з 2016 року. Одним з головних напрямків нашої діяльності є підготовка та працевлаштування спеціалістів у німецькомовних країнах. Серед наших партнерів – великі мережі медичних закладів по всій Німеччині та німецькі агенства з працевлаштування медичного персоналу. Підтвердженням нашої надійності є багаторічний досвід роботи у Німеччині, Австрії та на Філіппінах.{% endblocktranslate %}</p>
+        <img class="about__image" srcset="
+                  {% static 'main/images/country-choice-180.png' %} 180w,
+                  {% static 'main/images/country-choice-280.png' %} 280w
+              " src="{% static 'main/images/country-choice.png' %}"
+          sizes="(min-width: 1280px) 180px, (min-width: 768px) 280px, (min-width: 480px) 180px, 30vw"
+          alt="{% translate 'Вибір країни' %}">
+
+      </div>
+
+      <a class="about__link button" href="https://workconsult.ua/" target="_blank">{% translate 'Головний сайт компанії' %}</a>
+
+    </div>
+  </section>
+
+  <section class="info section">
+    <div class="container info__container">
+      <h2 class="visually-hidden">{% translate 'Відео інформація про програму' %}</h2>
+      <div class="info__videowrapper">
+        <iframe class="info__iframe" src="https://www.youtube.com/embed/k-docztM3Fk" title="YouTube video player"
+          frameborder="0" allow="autoplay;" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="program section" id="program">
+    <div class="container program__container">
+      <p class="program__pretitle-text">{% blocktranslate %}Компанія Workconsult разом з німецькими партнерами пропонує медсестрам та
+        медбратам України безкоштовний повний цикл підготовки та працевлаштування у Німеччині{% endblocktranslate %}</p>
+      <h2 class="section__title program__title">{% translate 'Що включає програма?' %}</h2>
+      <p class="program__posttitle-text">{% blocktranslate %}Наша програма фінансується роботодавцями, тому є безкоштовною для українських медсестер{% endblocktranslate %}</p>
+      <div class="programm__block">
+
+        <ul class="program__body">
+
+          <li class="program__phase program__phase--width is-active">
+            <p class="phase__title">Мовна підготовка</p>
+            <ul class="program__phase-list">
+              <li class="program__phase-item">{% blocktranslate %}Онлайн-курс німецької мови, що проводиться на базі нашої сучасної школи
+                go4more.School.{% endblocktranslate %}
+
+                <div class="program__wrap">
+                    <a class="program__link button button--accent" href="https://go4more.school/ua/" target="_blank">go4more.School</a>
+                </div>
+                  <a href="#course" class="program__more scrollto">{% blocktranslate %}Детальніше про нашу мовну школу.{% endblocktranslate %}</a>
+
+              </li>
+              <li class="program__phase-item">{% blocktranslate %}Тривалість курсу приблизно 12 місяців.{% endblocktranslate %}</li>
+              <li class="program__phase-item">{% blocktranslate %}Підготовка до мовного іспиту (рівень В2). <strong>Складення іспиту оплачується роботодавцем</strong>{% endblocktranslate %}</li>
+              <li class="program__phase-item">{% blocktranslate %}Додаткові курси з медичною термінологією.{% endblocktranslate %}</li>
+            </ul>
+          </li>
+
+          <li class="program__phase program__phase--width">
+            <p class="phase__title">Визнання професійної кваліфікації</p>
+            <ul class="program__phase-list">
+              <li class="program__phase-item">{% blocktranslate %}Підготовка до іспиту на професійні знання та здача іспиту.{% endblocktranslate %}</li>
+              <li class="program__phase-item">{% blocktranslate %}Заняття з підготовки також проходять онлайн.{% endblocktranslate %}</li>
+            </ul>
+          </li>
+
+          <li class="program__phase program__phase--width">
+            <p class="phase__title">Переїзд до Німеччини</p>
+            <ul class="program__phase-list">
+              <li class="program__phase-item">{% blocktranslate %}Оформлення, переклад та засвідчення документів.{% endblocktranslate %}</li>
+                <li class="program__phase-item">{% blocktranslate %}Авіапереліт. <strong>Вартість квитка компенсується роботодавцем.</strong>{% endblocktranslate %}</li>
+              <li class="program__phase-item">{% blocktranslate %}Допомога при поселенні.{% endblocktranslate %}</li>
+            </ul>
+          </li>
+
+          <li class="program__phase program__phase--width">
+            <p class="phase__title">Працевлаштування</p>
+            <ul class="program__phase-list">
+              <li class="program__phase-item">{% blocktranslate %}Підбір вакансій відповідно до Вашого рівня кваліфікації.{% endblocktranslate %}</li>
+              <li class="program__phase-item">{% blocktranslate %}Організація співбесіди з майбутніми роботодавцями.{% endblocktranslate %}</li>
+              <li class="program__phase-item">{% blocktranslate %}За необхідності проходження оплачуваної практики на базі роботодавця.{% endblocktranslate %}</li>
+              <li class="program__phase-item">{% blocktranslate %}Офіційне працевлаштування у медичних закладах Німеччини.{% endblocktranslate %}</li>
+            </ul>
+
+          </li>
+          <li class="gutter-sizer"></li>
+        </ul>
+
+        <button class="program__button">
+          <i class="arrow-button arrow-button__right"></i>
+        </button>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="todo section">
+
+    <div class="container todo__container todo__header">
+      <a class="button todo__button" href="/form">{% translate 'Заповнити форму' %}</a>
+      <h2 class="section__title todo__title">{% translate 'Що потрібно, щоб працювати медсестрою у Німеччині?' %}</h2>
+    </div>
+
+    <div class="todo__tabs-wrap">
+      <div class="container todo__container">
+        <div class="todo__tabs-container">
+
+          <ul class="todo__tabs">
+            <li class="todo__tabs-btn tabs-btn--active" data-tab="tab1">
+              <p>{% translate 'Знання німецької:' %}</p>
+            </li>
+            <li class="todo__tabs-btn" data-tab="tab2">
+              <p>{% translate 'Визнання кваліфікації:' %}</p>
+            </li>
+            <li class="todo__tabs-btn" data-tab="tab3">
+              <p>{% translate 'Практика:' %}</p>
+            </li>
+
+          </ul>
+
+          <button class="todo__arrow-btn todo__left-bnt" aria-label="{% translate 'Прогорнути вліво' %}" data-switch-left>
+            <i class="arrow-button arrow-button__left"></i>
+          </button>
+
+          <button class="todo__arrow-btn todo__right-bnt" aria-label="{% translate 'Прогорнути вправо' %}" data-switch-right>
+            <i class="arrow-button arrow-button__right"></i>
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container todo__container todo__list-container">
+      <ul class="todo__list">
+
+        <li class="todo__item is-open" id="tab1">
+          <p class="todo__item-text">{% blocktranslate %}Ви повинні мати рівень В2 з німецької мови для того, щоб працювати медсетрою у Німеччині. Цей рівень можна підтвердити здавши іспит у міжнародній організації (Goethe-Institut, ÖSD тощо) і отримавши відповідний сертифікат. У нашій мовній школі ми навчимо Вас німецькій мові і підготуємо до здачі іспиту. Курси та здача іспиту оплачуються роботодавцем.{% endblocktranslate %}
+          </p>
+        </li>
+
+        <li class="todo__item" id="tab2">
+          <p class="todo__item-text">{% blocktranslate %}Навчальні програми для медсестер Німеччини та України відрізняються, тому для отримання права працювати Вам необхідно підтвердити відповідність рівню Вашої  кваліфікації німецьким стандартам.
+
+  Для визнання кваліфікації обирається один з двох варіантів.
+
+  Перший варіант - складення іспиту на професійні знання у відповідному центрі  перепідготовки медперсоналу в Німеччині. Наша команда підготує Вас до іспиту і організує його проведення.
+
+  Другий варіант – проходження оплачуваної практики у роботодавця. По завершенні Ви замість кваліфікаційного іспиту проходете інтерв'ю за програмою практичного курсу. Найчастіше перевага надається саме другому варіанту.
+  {% endblocktranslate %}</p>
+        </li>
+
+        <li class="todo__item" id="tab3">
+          <p class="todo__item-text">{% blocktranslate %}Найбільш ефективним способом визнання кваліфікації є інтеграційна практика в якості помічника медсестри. Практика проходить у медичному закладі роботодавця і зазвичай становить 6-8 місяців. За цей час Ви поступово адаптуєтеся до німецькомовного професійного середовища. Протягом всієї практики Ви отримуєте заробітну плату (від 1200 євро і більше). По завершенні практики Ви зможете працювати медсестрою в тому ж самому закладі.
+
+  У більшості клінік є власні гуртожитки, де Ви зможете мешкати безкоштовно або за вартістю нижче ринкової. Ми та наші партнери допоможемо Вам у вирішенні всіх питань з житлом.
+  {% endblocktranslate %}</p>
+        </li>
+
+
+      </ul>
+    </div>
+
+  </section>
+
+  <section class="course section" id="course">
+    <div class="container course__container">
+      <h2 class="section__title course__title">{% translate 'Курс німецької' %}</h2>
+
+      <div class="course__videowrapper">
+        <iframe class="course__iframe" src="https://www.youtube.com/embed/k-docztM3Fk" title="YouTube video player"
+          frameborder="0" allow="autoplay;" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="container course__description">
+
+      <p class="course__text">
+        {% blocktranslate %}
+        Мовна підготовка проходить на базі онлайн-школи компанії Workconsult-go4more.School, де професійні викладачі з сертифікованим рівнем володіння німецькою мовою С1-С2 за 12 місяців навчання пройдуть шлях зі студентом від початківця до B2.
+        {% endblocktranslate %}
+      </p>
+
+      <div class="course__link-container">
+        <a class="course__link button button--accent" href="https://go4more.school/ua/" target="_blank">go4more.School</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="requirement section">
+    <div class="container requirement__container">
+      <h2 class="section__title requirement__title">{% translate 'Вимоги до кандидатів' %}</h2>
+
+      <div class="requirement__content">
+        <p class="requirement__title">{% translate "Кандидат повинен:" %}</p>
+        <ul class="requirement__list">
+          <li class="requirement__item">
+            {% blocktranslate %}
+            мати освіту за спеціалізацією «Сестринська справа» або бути студентом останніх курсів цієї спеціальності
+            {% endblocktranslate %}
+          </li>
+          <li class="requirement__item">
+            {% blocktranslate %}
+            надати необхідні документи: диплом (за наявності) чи довідку про навчання, коротку автобіографію, довідку про несудимість, сертифікат про рівень володіння мовою, якщо є.
+            {% endblocktranslate %}
+          </li>
+          <li class="requirement__item">
+            {% blocktranslate %}
+            регулярно і вчасно відвідувати онлайн-заняття з німецької мови та отримати сертифікат рівня В2 по завершенні курсу.
+            {% endblocktranslate %}
+          </li>
+          <li class="requirement__item">
+            {% blocktranslate %}
+            проходити курси підготовки до визнання професійної кваліфікації
+            {% endblocktranslate %}
+          </li>
+          <li class="requirement__item">
+            {% blocktranslate %}
+            відпрацювати у запропонованого роботодавця не менше 24 місяців, починаючи з моменту визнання кваліфікації у Німеччині.
+            {% endblocktranslate %}
+          </li>
+        </ul>
+      </div>
+      <a class="button requirement__button" href="/form">Заповнити форму</a>
+
+    </div>
+  </section>
+
+  <section class="benefits section">
+    <div class="container">
+      <h2 class="section__title benefits__title">{% translate 'Чому саме Німеччина?' %}</h2>
+
+      <div class="benefits__wrap">
+
+        <ul class="benefits__info">
+          <li class="benefits__item">
+            {% blocktranslate %}
+            В Німеччині дуже великий попит на кваліфікованих працівників з-за кордону.
+            {% endblocktranslate %}
+          </li>
+          <li class="benefits__item">
+            {% blocktranslate %}
+            Мінімальний валовий річний дохід у сестринській справі становить 25 000 євро або приблизно 800 000 грн.
+            {% endblocktranslate %}
+          </li>
+          <li class="benefits__item">
+            {% blocktranslate %}
+            Розвинута інфраструктура, багато визначних пам'яток та музеїв
+            {% endblocktranslate %}
+          </li>
+          <li class="benefits__item">
+            {% blocktranslate %}
+            Високий рівень життя та показників соціального захисту населення для будь-якої категорії громадян.
+            {% endblocktranslate %}
+          </li>
+          <li class="benefits__item">
+           {% blocktranslate %}
+           Дотримання законів та значні штрафи за порушення суспільного порядку.
+           {% endblocktranslate %}
+          </li>
+          <li class="benefits__item">
+            {% blocktranslate %}
+            Особливе ставлення до екології - турбота про чистоту повітря і води, переробка відходів і боротьба зі шкідливими викидами.
+            {% endblocktranslate %}
+          </li>
+          <li class="benefits__item">
+            {% blocktranslate %}
+            Доброзичливість німців, які завжди ввічливі і толерантні.
+            {% endblocktranslate %}
+          </li>
+          <li class="benefits__item">
+            {% blocktranslate %}
+            Доступні ціни товарів першої необхідності і продуктів, строгий контроль їхньої якості.
+            {% endblocktranslate %}
+          </li>
+          <li class="benefits__item">
+            {% blocktranslate %}
+            Можливість отримання громадянства та постійного місця проживання при дотриманні правил проживання в Німеччині.
+            {% endblocktranslate %}
+          </li>
+
+        </ul>
+
+        <img class="benefits__flag" src="{% static 'main/images/germany-300.png' %}" alt="{% translate 'Флаг у вигляді карти Німеччини' %}" >
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="germangallery section">
+    <div class="container">
+      <h2 class="section__title">{% translate 'Фото Німеччини' %}</h2>
+
+      <div class="germangallery__container carousel__container">
+        <button class="carousel__button carousel__button-left germangallery__left">
+          <i class="arrow-button arrow-button__left"></i>
+        </button>
+        <ul class="germangallery__carousel carousel__gallery">
+          <li class="carousel__item">
+            <img class="" srcset="
+                    {% static 'main/images/german-gallery/germany-1-175.jpg' %} 175w,
+                    {% static 'main/images/german-gallery/germany-1-240.jpg' %} 240w,
+                    {% static 'main/images/german-gallery/germany-1-500.jpg' %} 500w,
+                    {% static 'main/images/german-gallery/germany-1-1000.jpg' %} 1000w
+                " src="{% static 'main/images/german-gallery/germany-1-175.jpg' %}" sizes="50vw" alt="{% translate 'Фото Німеччини' %}"
+              data-lazy="{% static 'main/images/german-gallery/germany-1-175.jpg' %}">
+          </li>
+          <li class="carousel__item">
+            <img class="" srcset="
+                    {% static 'main/images/german-gallery/germany-2-175.jpg' %} 175w,
+                    {% static 'main/images/german-gallery/germany-2-240.jpg' %} 240w,
+                    {% static 'main/images/german-gallery/germany-2-500.jpg' %} 500w,
+                    {% static 'main/images/german-gallery/germany-2-1000.jpg' %} 1000w
+                " src="{% static 'main/images/german-gallery/germany-2-175.jpg' %}" sizes="50vw" alt="{% translate 'Фото Німеччини' %}"
+              data-lazy="{% static 'main/images/german-gallery/germany-2-175.jpg' %}">
+          </li>
+          <li class="carousel__item">
+            <img class="" srcset="
+                    {% static 'main/images/german-gallery/germany-3-175.jpg' %} 175w,
+                    {% static 'main/images/german-gallery/germany-3-240.jpg' %} 240w,
+                    {% static 'main/images/german-gallery/germany-3-500.jpg' %} 500w,
+                    {% static 'main/images/german-gallery/germany-3-1000.jpg' %} 1000w
+                " src="{% static 'main/images/german-gallery/germany-3-175.jpg' %}" sizes="50vw" alt="{% translate 'Фото Німеччини' %}"
+              data-lazy="{% static 'main/images/german-gallery/germany-3-175.jpg' %}">
+          </li>
+          <li class="carousel__item">
+            <img class="" srcset="
+                    {% static 'main/images/german-gallery/germany-1-175.jpg' %} 175w,
+                    {% static 'main/images/german-gallery/germany-1-240.jpg' %} 240w,
+                    {% static 'main/images/german-gallery/germany-1-500.jpg' %} 500w,
+                    {% static 'main/images/german-gallery/germany-1-1000.jpg' %} 1000w
+                " src="{% static 'main/images/german-gallery/germany-1-175.jpg' %}" sizes="50vw" alt="{% translate 'Фото Німеччини' %}"
+              data-lazy="{% static 'main/images/german-gallery/germany-1-175.jpg' %}">
+          </li>
+          <li class="carousel__item">
+            <img class="" srcset="
+                    {% static 'main/images/german-gallery/germany-2-175.jpg' %} 175w,
+                    {% static 'main/images/german-gallery/germany-2-240.jpg' %} 240w,
+                    {% static 'main/images/german-gallery/germany-2-500.jpg' %} 500w,
+                    {% static 'main/images/german-gallery/germany-2-1000.jpg' %} 1000w
+                " src="{% static 'main/images/german-gallery/germany-2-175.jpg' %}" sizes="50vw" alt="{% translate 'Фото Німеччини' %}"
+              data-lazy="{% static 'main/images/german-gallery/germany-2-175.jpg' %}">
+          </li>
+          <li class="carousel__item">
+             <img class="" srcset="
+                    {% static 'main/images/german-gallery/germany-3-175.jpg' %} 175w,
+                    {% static 'main/images/german-gallery/germany-3-240.jpg' %} 240w,
+                    {% static 'main/images/german-gallery/germany-3-500.jpg' %} 500w,
+                    {% static 'main/images/german-gallery/germany-3-1000.jpg' %} 1000w
+                " src="{% static 'main/images/german-gallery/germany-3-175.jpg' %}" sizes="50vw" alt="{% translate 'Фото Німеччини' %}"
+              data-lazy="{% static 'main/images/german-gallery/germany-3-175.jpg' %}">
+          </li>
+        </ul>
+        <button class="carousel__button carousel__button-right germangallery__right">
+          <i class="arrow-button arrow-button__right carousel__right-arrow"></i>
+        </button>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="advantages section">
+    <div class="container advantages__container">
+      <h2 class="section__title">{% translate 'В чому переваги нашої програми?' %}</h2>
+
+      <div class="advantages__wrap">
+
+        <img class="advantages__image" src="{% static 'main/images/team-meeting.png' %}">
+
+        <ul class="advantages__list">
+
+          <li class="advantages__item">
+            {% blocktranslate %}
+            Наші курси – це захоплююча подорож з друзями та колегами.
+            {% endblocktranslate %}
+          </li>
+          <li class="advantages__item">
+            {% blocktranslate %}
+            Інтенсивний мовний курс триває 12-14 місяців. Щодня Вас будуть навчати професійні викладачі.
+            {% endblocktranslate %}
+          </li>
+          <li class="advantages__item">
+            {% blocktranslate %}
+            Окрім занять з викладачем Ви отримуєте доступ до навчальної платформи, де зможете самостійно займатись в будь-який час.
+            {% endblocktranslate %}
+          </li>
+          <li class="advantages__item">
+            {% blocktranslate %}
+            Програма включає підготовку до роботи у німецькомовному середовищі з медичною термінологією.
+            {% endblocktranslate %}
+          </li>
+          <li class="advantages__item">
+            {% blocktranslate %}
+            Мовний курс та працевлаштування є безкоштовними, якщо Ви виконуєте умови програми.
+            {% endblocktranslate %}
+          </li>
+          <li class="advantages__item">
+            {% blocktranslate %}
+            Обіцяємо, що Ви не залишитеся на самоті в жодному з етапів, адже ми всі - єдина команда!
+            {% endblocktranslate %}
+          </li>
+          <li class="advantages__item">
+            {% blocktranslate %}
+            Ми надаємо Вам шанс назавжди змінити своє життя на краще! Наша програма підготовки і працевлаштування - це чиста інвестиція у Ваше майбутнє.
+            {% endblocktranslate %}
+          </li>
+          
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="facilities section">
+    <div class="container">
+      <h2 class="section__title facilities__title visually-hidden">{% translate 'Заклади наших партнерів' %}</h2>
+      <h3 class="section__title facilities__title">{% translate 'Заклади наших партнерів ззовні' %}</h3>
+
+
+      <ul class="facilities__gallery">
+          <li class="facilities__item">
+            <img class="facilities__image" srcset="
+                    {% static 'main/images/facilities/facility-1-200.jpg' %} 200w,
+                    {% static 'main/images/facilities/facility-1-260.jpg' %} 260w,
+                    {% static 'main/images/facilities/facility-1-500.jpg' %} 500w
+                " src="{% static 'main/images/facilities/facility-1-500.jpg' %}" sizes="50vw" alt="{% translate 'Фото Німеччини' %}и">
+          </li>
+
+          <li class="facilities__item">
+            <img class="facilities__image" srcset="
+                    {% static 'main/images/facilities/facility-2-200.jpg' %} 200w,
+                    {% static 'main/images/facilities/facility-2-260.jpg' %} 260w,
+                    {% static 'main/images/facilities/facility-2-500.jpg' %} 500w
+                " src="{% static 'main/images/facilities/facility-2-500.jpg' %}" sizes="50vw" alt="{% translate 'Фото Німеччини' %}">
+          </li>
+
+          <li class="facilities__item">
+            <img class="facilities__image" srcset="
+                    {% static 'main/images/facilities/facility-3-200.jpg' %} 200w,
+                    {% static 'main/images/facilities/facility-3-260.jpg' %} 260w,
+                    {% static 'main/images/facilities/facility-3-500.jpg' %} 500w
+                " src="{% static 'main/images/facilities/facility-3-500.jpg' %}" sizes="50vw" alt="{% translate 'Фото Німеччини' %}">
+          </li>
+
+          <li class="facilities__item">
+            <img class="facilities__image" srcset="
+                    {% static 'main/images/facilities/facility-4-200.jpg' %} 200w,
+                    {% static 'main/images/facilities/facility-4-260.jpg' %} 260w,
+                    {% static 'main/images/facilities/facility-4-500.jpg' %} 500w
+                " src="{% static 'main/images/facilities/facility-4-500.jpg' %}" sizes="50vw" alt="{% translate 'Фото Німеччини' %}">
+          </li>
+        </ul>
+
+
+      <h3 class="section__title facilities__title facilities-partner__title">{% translate 'Заклади наших партнерів зсередини' %}</h3>
+
+      <ul class="facilities__gallery">
+          <li class="facilities__item">
+            <img class="facilities__image" srcset="
+                    {% static 'main/images/facilities/facility-5-200.jpg' %} 200w,
+                    {% static 'main/images/facilities/facility-5-260.jpg' %} 260w,
+                    {% static 'main/images/facilities/facility-5-500.jpg' %} 500w
+                " src="{% static 'main/images/facilities/facility-5-500.jpg' %}" sizes="50vw" alt="{% translate 'Фото Німеччини' %}">
+          </li>
+
+          <li class="facilities__item">
+            <img class="facilities__image" srcset="
+                    {% static 'main/images/facilities/facility-6-200.jpg' %} 200w,
+                    {% static 'main/images/facilities/facility-6-260.jpg' %} 260w,
+                    {% static 'main/images/facilities/facility-6-500.jpg' %} 500w
+                " src="{% static 'main/images/facilities/facility-6-500.jpg' %}" sizes="50vw" alt="{% translate 'Фото Німеччини' %}">
+          </li>
+
+          <li class="facilities__item">
+            <img class="facilities__image" srcset="
+                    {% static 'main/images/facilities/facility-7-200.jpg' %} 200w,
+                    {% static 'main/images/facilities/facility-7-260.jpg' %} 260w,
+                    {% static 'main/images/facilities/facility-7-500.jpg' %} 500w
+                " src="{% static 'main/images/facilities/facility-7-500.jpg' %}" sizes="50vw" alt="{% translate 'Фото Німеччини' %}">
+          </li>
+
+          <li class="facilities__item">
+            <img class="facilities__image" srcset="
+                    {% static 'main/images/facilities/facility-8-200.jpg' %} 200w,
+                    {% static 'main/images/facilities/facility-8-260.jpg' %} 260w,
+                    {% static 'main/images/facilities/facility-8-500.jpg' %} 500w
+                " src="{% static 'main/images/facilities/facility-8-500.jpg' %}" sizes="50vw" alt="{% translate 'Фото Німеччини' %}">
+          </li>
+        </ul>
+
+    </div>
+  </section>
+
+  <section class="review section" id="review">
+    <div class="container">
+      <h2 class="section__title review__title">{% translate 'Відгуки' %}</h2>
+
+      <div class="review__container carousel__container">
+        <button class="carousel__button carousel__button-left review__left">
+          <i class="arrow-button arrow-button__left carousel__left-arrow"></i>
+        </button>
+        <ul class="review__list carousel__gallery">
+
+          <li class="review__item carousel__item">
+            <img class="review__image" src="{% static 'main/images/reviews/review-1.png' %}" alt="{% translate 'Відгук' %}">
+          </li>
+          <li class="review__item carousel__item">
+            <img class="review__image" src="{% static 'main/images/reviews/review-2.png' %}" alt="{% translate 'Відгук' %}">
+          </li>
+          <li class="review__item carousel__item">
+            <img class="review__image" src="{% static 'main/images/reviews/review-3.png' %}" alt="{% translate 'Відгук' %}">
+          </li>
+          <li class="review__item carousel__item">
+            <img class="review__image" src="{% static 'main/images/reviews/review-4.png' %}" alt="{% translate 'Відгук' %}">
+          </li>
+          <li class="review__item carousel__item">
+            <img class="review__image" src="{% static 'main/images/reviews/review-5.png' %}" alt="{% translate 'Відгук' %}">
+          </li>
+          <li class="review__item carousel__item">
+            <img class="review__image" src="{% static 'main/images/reviews/review-6.png' %}" alt="{% translate 'Відгук' %}">
+          </li>
+          <li class="review__item carousel__item">
+            <img class="review__image" src="{% static 'main/images/reviews/review-7.png' %}" alt="{% translate 'Відгук' %}">
+          </li>
+          <li class="review__item carousel__item">
+            <img class="review__image" src="{% static 'main/images/reviews/review-8.png' %}" alt="{% translate 'Відгук' %}">
+          </li>
+          <li class="review__item carousel__item">
+            <img class="review__image" src="{% static 'main/images/reviews/review-9.png' %}" alt="{% translate 'Відгук' %}">
+          </li>
+          <li class="review__item carousel__item">
+            <img class="review__image" src="{% static 'main/images/reviews/review-10.png' %}" alt="{% translate 'Відгук' %}">
+          </li>
+          <li class="review__item carousel__item">
+            <img class="review__image" src="{% static 'main/images/reviews/review-11.png' %}" alt="{% translate 'Відгук' %}">
+          </li>
+          <li class="review__item carousel__item">
+            <img class="review__image" src="{% static 'main/images/reviews/review-12.png' %}" alt="{% translate 'Відгук' %}">
+          </li>
+
+        </ul>
+        <button class="carousel__button carousel__button-right review__right">
+          <i class="arrow-button arrow-button__right carousel__right-arrow"></i>
+        </button>
+
+      </div>
+
+    </div>
+  </section>
+
+<!--  <section class="review section" id="review">-->
+<!--    <div class="container">-->
+<!--      <h2 class="section__title review__title">{% translate 'Відгуки' %}</h2>-->
+
+<!--      <div class="review__container carousel__container">-->
+<!--        <button class="review__left carousel__button carousel__button-left">-->
+<!--          <i class="arrow-button arrow-button__left carousel__left-arrow"></i>-->
+<!--        </button>-->
+<!--        <ul class="review__list">-->
+
+<!--          <li class="review__item">-->
+<!--            <img class="review__photo">-->
+<!--            <p class="review__text">-->
+<!--              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mauris diam, dignissim vitae purus consequat, consectetur malesuada augue. Aliquam non convallis erat, at mattis tellus.-->
+<!--            </p>-->
+<!--          </li>-->
+
+<!--          <li class="review__item">-->
+<!--            <img class="review__photo">-->
+<!--            <p class="review__text">-->
+<!--              Donec lacus purus, egestas non enim eu, molestie imperdiet quam. Aliquam erat volutpat. Sed efficitur, erat sit amet semper lobortis, velit tortor ultrices velit, ac molestie sapien nisi sit amet dolor. Cras dictum dolor ut velit tincidunt, ut dignissim nisi fermentum. Quisque ac aliquam ex.-->
+<!--            </p>-->
+<!--          </li>-->
+
+<!--          <li class="review__item">-->
+<!--            <img class="review__photo">-->
+<!--            <p class="review__text">-->
+<!--              Fusce bibendum tincidunt enim, a varius purus volutpat vitae. Nunc ullamcorper magna elit, vitae porta turpis scelerisque vulputate. Duis quis mi id turpis tempor pellentesque. Aliquam laoreet fringilla arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean dignissim, sapien eu accumsan ultricies, augue purus volutpat leo-->
+<!--          </li>-->
+
+<!--          <li class="review__item">-->
+<!--            <img class="review__photo">-->
+<!--            <p class="review__text">-->
+<!--              Fusce bibendum tincidunt enim, a varius purus volutpat vitae. Nunc ullamcorper magna elit, vitae porta turpis scelerisque vulputate. Duis quis mi id turpis tempor pellentesque. Aliquam laoreet fringilla arcu.-->
+<!--          </li>-->
+
+<!--          <li class="review__item">-->
+<!--            <img class="review__photo">-->
+<!--            <p class="review__text">-->
+<!--              Fusce bibendum tincidunt enim, a varius purus volutpat vitae. Nunc ullamcorper magna elit, vitae porta turpis scelerisque vulputate. Duis quis mi id turpis tempor pellentesque.-->
+<!--            </p>-->
+<!--          </li>-->
+
+
+<!--        </ul>-->
+<!--        <button class="review__right carousel__button carousel__button-right">-->
+<!--          <i class="arrow-button arrow-button__right carousel__right-arrow"></i>-->
+<!--        </button>-->
+
+<!--      </div>-->
+
+<!--    </div>-->
+<!--  </section>-->
+
+
+  <section class="experience section" id="experience">
+    <div class="container">
+      <h2 class="section__title experience__title">{% translate 'Наш досвід в інших країнах' %}</h2>
+      <p class="experience__text">{% blocktranslate %}Маючи позитивний досвід підготовки бiльш як 500 філіппінських медсестер, ми
+        гарантуємо, що успішне проходження програми вивчення німецької мови в запорукою отримання безцінного досвіду
+        роботи за фахом медичної сестри в Німеччині протягом двох років.{% endblocktranslate %}</p>
+
+      <div class="experience__container">
+        <ul class="experience__gallery">
+          <li class="experience__item">
+            <img class="experience__image" srcset="
+                    {% static 'main/images/experience/experience-1-200.jpg' %} 200w,
+                    {% static 'main/images/experience/experience-1-260.jpg' %} 260w,
+                    {% static 'main/images/experience/experience-1-500.jpg' %} 500w
+                " src="{% static 'main/images/experience/experience-1-500.jpg' %}" sizes="50vw" alt="{% translate 'Фото команди' %}">
+          </li>
+          <li class="experience__item">
+             <img class="experience__image" srcset="
+                    {% static 'main/images/experience/experience-2-200.jpg' %} 200w,
+                    {% static 'main/images/experience/experience-2-260.jpg' %} 260w,
+                    {% static 'main/images/experience/experience-2-500.jpg' %} 500w
+                " src="{% static 'main/images/experience/experience-2-500.jpg' %}" sizes="50vw" alt="{% translate 'Фото команди' %}">
+          </li>
+          <li class="experience__item">
+             <img class="experience__image" srcset="
+                    {% static 'main/images/experience/experience-3-200.jpg' %} 200w,
+                    {% static 'main/images/experience/experience-3-260.jpg' %} 260w,
+                    {% static 'main/images/experience/experience-3-500.jpg' %} 500w
+                " src="{% static 'main/images/experience/experience-3-500.jpg' %}" sizes="50vw" alt="{% translate 'Фото команди' %}">
+          </li>
+          <li class="experience__item">
+             <img class="experience__image" srcset="
+                    {% static 'main/images/experience/experience-4-200.jpg' %} 200w,
+                    {% static 'main/images/experience/experience-4-260.jpg' %} 260w,
+                    {% static 'main/images/experience/experience-4-500.jpg' %} 500w
+                " src="{% static 'main/images/experience/experience-4-500.jpg' %}" sizes="50vw" alt="{% translate 'Фото команди' %}">
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="gallery section">
+    <div class="container">
+      <h2 class="section__title">{% translate 'Галерея WorkConsult' %}</h2>
+
+      <div class="gallery__container carousel__container">
+        <button class="carousel__button carousel__button-left gallery__left">
+          <i class="arrow-button arrow-button__left carousel__left-arrow"></i>
+        </button>
+        <ul class="gallery__carousel carousel__gallery">
+          <li class="carousel__item">
+            <img class="" srcset="
+                    {% static 'main/images/gallery/picture-1-255.jpg' %} 255w,
+                    {% static 'main/images/gallery/picture-1-300.jpg' %} 300w,
+                    {% static 'main/images/gallery/picture-1-500.jpg' %} 500w
+                " src="{% static 'main/images/gallery/picture-1-255.jpg' %}" sizes="40vw" alt="{% translate 'Фото співробітників компанії' %}"
+              data-lazy="{% static 'main/images/gallery/picture-1-255.jpg' %}">
+          </li>
+          <li class="carousel__item">
+            <img class="" srcset="
+                    {% static 'main/images/gallery/picture-2-255.jpg' %} 255w,
+                    {% static 'main/images/gallery/picture-2-300.jpg' %} 300w,
+                    {% static 'main/images/gallery/picture-2-500.jpg' %} 500w
+                " src="{% static 'main/images/gallery/picture-2-255.jpg' %}" sizes="40vw" alt="{% translate 'Фото співробітників компанії' %}"
+              data-lazy="{% static 'main/images/gallery/picture-2-255.jpg' %}">
+          </li>
+          <li class="carousel__item">
+            <img class="" srcset="
+                    {% static 'main/images/gallery/picture-3-255.jpg' %} 255w,
+                    {% static 'main/images/gallery/picture-3-300.jpg' %} 300w,
+                    {% static 'main/images/gallery/picture-3-500.jpg' %} 500w
+                " src="{% static 'main/images/gallery/picture-3-255.jpg' %}" sizes="40vw" alt="{% translate 'Фото співробітників компанії' %}"
+              data-lazy="{% static 'main/images/gallery/picture-3-255.jpg' %}">
+          </li>
+          <li class="carousel__item">
+            <img class="" srcset="
+                    {% static 'main/images/gallery/picture-1-255.jpg' %} 255w,
+                    {% static 'main/images/gallery/picture-1-300.jpg' %} 300w,
+                    {% static 'main/images/gallery/picture-1-500.jpg' %} 500w
+                " src="{% static 'main/images/gallery/picture-1-255.jpg' %}" sizes="40vw" alt="{% translate 'Фото співробітників компанії' %}"
+              data-lazy="{% static 'main/images/gallery/picture-1-255.jpg' %}">
+          </li>
+          <li class="carousel__item">
+            <img class="" srcset="
+                    {% static 'main/images/gallery/picture-2-255.jpg' %} 255w,
+                    {% static 'main/images/gallery/picture-2-300.jpg' %} 300w,
+                    {% static 'main/images/gallery/picture-2-500.jpg' %} 500w
+                " src="{% static 'main/images/gallery/picture-2-255.jpg' %}" sizes="40vw" alt="{% translate 'Фото співробітників компанії' %}"
+              data-lazy="{% static 'main/images/gallery/picture-2-255.jpg' %}">
+          </li>
+          <li class="carousel__item">
+            <img class="" srcset="
+                    {% static 'main/images/gallery/picture-3-255.jpg' %} 255w,
+                    {% static 'main/images/gallery/picture-3-300.jpg' %} 300w,
+                    {% static 'main/images/gallery/picture-3-500.jpg' %} 500w
+                " src="{% static 'main/images/gallery/picture-3-255.jpg' %}" sizes="40vw" alt="{% translate 'Фото співробітників компанії' %}"
+              data-lazy="{% static 'main/images/gallery/picture-3-255.jpg' %}">
+          </li>
+        </ul>
+        <button class="carousel__button carousel__button-right gallery__right">
+          <i class="arrow-button arrow-button__right carousel__right-arrow"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="appeal section">
+    <div class="container appeal__container">
+      <div class="appeal__form">
+        <h2 class="appeal__title">{% translate 'Заповнюйте анкету, або залишайте заявку і наші менеджери Вам допоможуть!' %}</h2>
+        <div class="appeal__items">
+          <a class="appeal__button button button--accent" href="/form">{% translate 'Заповнити форму' %}</a>
+          <a class="appeal__button button button--accent scrollto" href="#hero__contact">{% translate 'Замовити дзвінок' %}</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+{% endblock %}
+
+{% block popup %}
+
+<div class="backdrop is-hidden">
+  <div class="popup">
+    <p class="popup__message">{% translate 'Запит надіслано!' %} </p>
+    <button class="popup__button">
+      <svg class="popup__close">
+        <use href="{% static 'main/images/icons/sprite.svg' %}#icon-close"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block links %}
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js" crossorigin="anonymous"></script>
+  <script src="{% static 'main/js/main.js' %}" crossorigin="anonymous"></script>
+
+{% endblock %}

@@ -1,0 +1,186 @@
+.footer {
+  background-color: $brand-color;
+  color: $white-color;
+}
+
+.footer__mobile {
+  @media screen and (min-width: $tablet-breakpoint) {
+    display: none;
+  }
+}
+
+.footer__info-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.footer__info {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: baseline;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.footer__reward-container {
+  height: 50px;
+  background-color: $white-color;
+}
+
+.footer__reward {
+  display: flex;
+}
+
+.footer__mobile .footer__reward {
+  justify-content: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.footer__reward-item:not(:first-child) {
+  margin-left: -13px;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    margin-left: -20px;
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin-left: -35px;
+  }
+}
+
+.footer__reward-image {
+  width: 70px;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    width: 105px;
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    width: 200px;
+  }
+}
+
+.footer__social-container {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.footer__social {
+  display: flex;
+}
+
+.footer__social-item:not(:first-child) {
+  margin-left: 18px;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin-left: 30px;
+  }
+}
+
+.footer__social-image {
+  width: 44px;
+  height: 44px;
+  display: block;
+  fill: inherit;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.footer__container {
+  display: none;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    display: block;
+  }
+}
+
+.footer__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 65px;
+  padding-bottom: 35px;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    height: 170px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.footer__wrap .footer__info {
+  font-size: 14px;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
+
+.footer__wrap .footer__reward {
+  margin-top: 25px;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin-top: 0;
+  }
+}
+
+.footer__links {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: $white-color;
+  fill: $brand-color;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.footer__desktop {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__mobile .footer__social {
+  justify-content: center;
+  fill: $white-color;
+}
+
+.footer__partner {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin-left: 30px;
+  }
+}
+
+.footer__partner-item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.footer__go4more {
+  width: 50px;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    width: 80px;
+  }
+}
+
+.footer__workconsult {
+  width: 160px;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    width: 250px;
+  }
+}

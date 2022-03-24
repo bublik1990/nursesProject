@@ -1,0 +1,115 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  // width: 100%;
+  // max-width: 280px;
+  height: 55px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border: none;
+  border-radius: 13px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: normal;
+  box-shadow: 2px 2px 6px 2px $first-shadow-color;
+  background-color: $brand-color;
+  color: $white-color;
+  user-select: none;
+  cursor: pointer;
+  transition: 250ms linear;
+    
+    &:hover,
+    &:focus {
+        background-color: $hover-color;
+    }
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    font-size: 18px;
+  }
+}
+
+.button--accent {
+  padding-left: 30px;
+  padding-right: 30px;
+  background-image: linear-gradient(to top left, $first-accent-btn-color, $second-accent-btn-color);
+  color: $black-color;
+  box-shadow: 2px 2px 6px -1px $first-shadow-color;
+
+  position: relative;
+  z-index: 1;
+
+
+  &:before {
+    border-radius: inherit;
+    background-image: linear-gradient(to top left, #ecaa44, #fffab8);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -100;
+    transition: opacity 250ms linear;
+  }
+
+  &:focus:before,
+  &:hover:before {
+    opacity: 1;
+
+    //@media screen and (min-width: $desktop-breakpoint) {
+    //  background-image: linear-gradient(to top left, $third-program-color, $third-program-color);
+    //}
+
+
+  }
+  //&:focus,
+  //&:hover {
+  //  background-image: linear-gradient(to top left, #f9c67d, #fbdd7c);
+  //}
+}
+
+.arrow-button {
+  display: block;
+  border-color: $brand-color;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+}
+
+.arrow-button__left {
+  transform: rotate(135deg);
+}
+
+.arrow-button__right {
+  transform: rotate(-45deg);
+}
+
+.button.up-button {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  height: 34px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 4px;
+  border-radius: 16px;
+  z-index: 3;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.up-button.is-shown {
+  display: block;
+}
+
+.arrow-up {
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-135deg);
+  border: solid $white-color;
+  border-width: 0 2px 2px 0;
+}

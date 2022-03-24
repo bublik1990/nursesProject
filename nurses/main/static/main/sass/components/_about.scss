@@ -1,0 +1,64 @@
+.about {
+  // padding-top: 25px;
+  // padding-bottom: 35px;
+  text-align: center;
+  background-color: $section-background-color;
+}
+
+.about__title {
+  text-align: center;
+  // font-family: "ArialBold";
+}
+
+.about__content {
+  margin-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    margin-top: 25px;
+    padding-left: 35px;
+    padding-right: 35px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.about__description {
+  text-align: left;
+  // line-height: 1.2;
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    font-size: 17px;
+    // line-height: 1.5;
+  }
+}
+
+.about__image {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 180px;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    width: 280px;
+  }
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    margin-top: 0;
+    margin-left: 75px;
+    width: 180px;
+  }
+}
+
+.about__link {
+  margin-top: 30px;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    margin-top: 45px;
+  }
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,166 @@
+{% load i18n %}
+{% load static %}
+{% load compress %}
+
+<footer class="footer" id="footer">
+
+    <div class="footer__mobile">
+      <div class="footer__info-container">
+        <div class="footer__info">
+          <p class="footer__company">{% translate 'ТОВ “Воркконсалт”' %}</p>
+          <address class="footer__address">{% translate '36000, Україна, м. Полтава, вул. Соборності, 50' %}</address>
+          <p class="footer__tel">{% translate 'Телефон' %}:
+            <a class="footer__tel-link" href="tel:+380967739355">+38 096 773 93 55</a> |
+            <a class="footer__tel-link" href="tel:+380666805079">+38 066 680 50 79</a>
+          </p>
+          <a class="footer__mail" href="mailto:ps@workconsult.ua">ps@workconsult.ua</a>
+        </div>
+      </div>
+      <div class="footer__reward-container">
+        <ul class="footer__reward">
+          <li class="footer__reward-item">
+
+            <img class="footer__reward-image" srcset="
+                    {% static 'main/images/medal-leader-of-the-year-70.png' %} 70w,
+                    {% static 'main/images/medal-leader-of-the-year-100.png' %} 100w,
+                    {% static 'main/images/medal-leader-of-the-year-200.png' %} 200w
+                " src="{% static 'main/images/medal-leader-of-the-year-200.png' %}" sizes="10vw" alt="{% translate 'Медаль лідер року' %}">
+          </li>
+          <li class="footer__reward-item">
+            <img class="footer__reward-image" srcset="
+                    {% static 'main/images/medal-consumer-choice-70.png' %} 70w,
+                    {% static 'main/images/medal-consumer-choice-100.png' %} 100w,
+                    {% static 'main/images/medal-consumer-choice-200.png ' %} 200w
+                " src="{% static 'main/images/medal-consumer-choice-200.png' %}" sizes="10vw" alt="{% translate 'Медаль вибір споживача' %}">
+          </li>
+          <li class="footer__reward-item">
+            <img class="footer__reward-image" srcset="
+                    {% static 'main/images/medal-coin-gold-70.png' %} 70w,
+                    {% static 'main/images/medal-coin-gold-100.png' %} 100w,
+                    {% static 'main/images/medal-coin-gold-200.png' %} 200w
+                " src="{% static 'main/images/medal-coin-gold-200.png' %}" sizes="10vw" alt="{% translate 'Золота медаль' %}">
+          </li>
+        </ul>
+      </div>
+      <div class="footer__social-container">
+        <ul class="footer__social">
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="https://www.facebook.com/workconsult.ukraine" target="_blank">
+
+              <svg class="footer__social-image" aria-label="{% translate 'Соціальна мережа компанії Facebook' %}">
+                <use href="{% static 'main/images/icons/sprite.svg' %}#icon-facebook"></use>
+              </svg>
+
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="https://www.instagram.com/workconsult.ukraine/" target="_blank">
+
+              <svg class="footer__social-image" aria-label="{% translate 'Соціальна мережа компанії Instagram' %}">
+                <use href="{% static 'main/images/icons/sprite.svg' %}#icon-instagram"></use>
+              </svg>
+
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#" target="_blank">
+
+              <svg class="footer__social-image" aria-label="{% translate 'Соціальна мережа компанії LinkedIn' %}">
+                <use href="{% static 'main/images/icons/sprite.svg' %}#icon-linkedin"></use>
+              </svg>
+
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer__container">
+
+      <div class="footer__wrap container">
+        <div class="footer__info">
+          <p class="footer__company">{% translate 'ТОВ “Воркконсалт”' %}</p>
+          <address class="footer__address">{% translate '36000, Україна, м. Полтава, вул. Соборності, 50' %}</address>
+          <p class="footer__tel">{% translate 'Телефон:' %}
+            <a class="footer__tel-link" href="tel:+380967739355">+38 096 773 93 55</a> |
+            <a class="footer__tel-link" href="tel:+380666805079">+38 066 680 50 79</a>
+          </p>
+          <a class="footer__mail" href="mailto:ps@workconsult.ua">ps@workconsult.ua</a>
+        </div>
+        <ul class="footer__reward">
+          <li class="footer__reward-item">
+
+            <img class="footer__reward-image" srcset="
+                    {% static 'main/images/medal-leader-of-the-year-70.png' %} 70w,
+                    {% static 'main/images/medal-leader-of-the-year-100.png' %} 100w,
+                    {% static 'main/images/medal-leader-of-the-year-200.png' %} 200w
+                " src=".{% static 'main/images/medal-leader-of-the-year-200.png' %}" sizes="10vw" alt="{% translate 'Медаль лідер року' %}">
+          </li>
+          <li class="footer__reward-item">
+            <img class="footer__reward-image" srcset="
+                    {% static 'main/images/medal-consumer-choice-70.png' %} 70w,
+                    {% static 'main/images/medal-consumer-choice-100.png' '%} 100w,
+                    {% static 'main/images/medal-consumer-choice-200.png' %} 200w
+                " src="{% static 'main/images/medal-consumer-choice-200.png' %}" sizes="10vw" alt="{% translate 'Медаль вибір споживача' %}">
+          </li>
+          <li class="footer__reward-item">
+            <img class="footer__reward-image" srcset="
+                    {% static 'main/images/medal-coin-gold-70.png' %} 70w,
+                    {% static 'main/images/medal-coin-gold-100.png' %} 100w,
+                    {% static 'main/images/medal-coin-gold-200.png' %} 200w
+                " src="{% static 'main/images/medal-coin-gold-200.png' %}" sizes="10vw" alt="{% translate 'Золота медаль' %}">
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__links">
+        <div class="container footer__desktop">
+          <ul class="footer__social">
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="https://www.facebook.com/workconsult.ukraine" target="_blank">
+
+                <svg class="footer__social-image" aria-label="{% translate 'Соціальна мережа компанії Facebook' %}">
+                  <use href="{% static 'main/images/icons/sprite.svg' %}#icon-facebook"></use>
+                </svg>
+
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="https://www.instagram.com/workconsult.ukraine/" target="_blank">
+
+                <svg class="footer__social-image" aria-label="{% translate 'Соціальна мережа компанії Instagram' %}">
+                  <use href="{% static 'main/images/icons/sprite.svg' %}#icon-instagram"></use>
+                </svg>
+
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#">
+
+                <svg class="footer__social-image" aria-label="{% translate 'Соціальна мережа компанії LinkedIn' %}">
+                  <use href="{% static 'main/images/icons/sprite.svg' %}#icon-linkedin"></use>
+                </svg>
+
+              </a>
+            </li>
+          </ul>
+          <ul class="footer__partner">
+            <li class="footer__partner-item">
+              <a class="footer__partner-link" href="https://go4more.school/ua/" target="_blank">
+                <img class="footer__partner-logo footer__go4more" src="{% static 'main/images/go4more-logo.png' %}"
+                  alt="{% translate 'Логотип компанії go4more' %}">
+              </a>
+            </li>
+            <li class="footer__partner-item">
+              <a class="footer__partner-link" href="https://workconsult.ua/" target="_blank">
+                <img class="footer__partner-logo footer__workconsult" src="{% static 'main/images/workconsult-logo.png' %}"
+                  alt="{% translate 'Логотип компанії WorkConsult' %}">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </footer>

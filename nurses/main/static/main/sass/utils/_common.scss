@@ -1,0 +1,67 @@
+.container {
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: $mobile-breakpoint) {
+    width: $mobile-breakpoint;
+  }
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    width: $tablet-breakpoint;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    width: $netbook-breakpoint;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    width: $desktop-breakpoint;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+.section {
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.section__title {
+  text-align: center;
+
+  font-size: 22px;
+  font-weight: 400;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    font-size: 28px;
+  }
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    font-size: 30px;
+  }
+}
+
+.preload * {
+  transition: none !important;
+}
+
+.errorlist {
+  font-weight: 600;
+  color: red;
+}

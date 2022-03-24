@@ -1,0 +1,489 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-07 13:40+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\main\templates\main\index.html:16
+msgid "Робота у Німеччині"
+msgstr "Работа в Германии"
+
+#: .\main\templates\main\index.html:43
+msgid "Логотип Workconsult"
+msgstr ""
+
+#: .\main\templates\main\index.html:52
+msgid "Полтава, вул. Соборності 46В"
+msgstr ""
+
+#: .\main\templates\main\index.html:69 .\main\templates\main\index.html:897
+#: .\main\templates\main\index.html:970
+msgid "Соціальна мережа компанії Facebook"
+msgstr ""
+
+#: .\main\templates\main\index.html:78 .\main\templates\main\index.html:906
+#: .\main\templates\main\index.html:979
+msgid "Соціальна мережа компанії Instagram"
+msgstr ""
+
+#: .\main\templates\main\index.html:87 .\main\templates\main\index.html:915
+#: .\main\templates\main\index.html:988
+msgid "Соціальна мережа компанії LinkedIn"
+msgstr ""
+
+#: .\main\templates\main\index.html:134
+msgid "Відкрити мобільне меню"
+msgstr ""
+
+#: .\main\templates\main\index.html:158
+msgid "Закрити мобільне меню"
+msgstr ""
+
+#: .\main\templates\main\index.html:164
+msgid "Головна"
+msgstr "Главная"
+
+#: .\main\templates\main\index.html:165
+msgid "Про нас"
+msgstr "О нас"
+
+#: .\main\templates\main\index.html:166
+msgid "Послуги"
+msgstr "Услуги"
+
+#: .\main\templates\main\index.html:167 .\main\templates\main\index.html:670
+msgid "Відгуки"
+msgstr "Отзывы"
+
+#: .\main\templates\main\index.html:168
+msgid "Корисна інформація"
+msgstr "Полезная информация"
+
+#: .\main\templates\main\index.html:169
+msgid "Контакти"
+msgstr "Контакты"
+
+#: .\main\templates\main\index.html:172 .\main\templates\main\index.html:321
+msgid "Заповнити форму"
+msgstr "Заполнить форму"
+
+#: .\main\templates\main\index.html:194
+msgid "Медсестри"
+msgstr ""
+
+#: .\main\templates\main\index.html:198
+msgid "Шукаєте роботу медсестрою?"
+msgstr "Ищете работу медсестрой?"
+
+#: .\main\templates\main\index.html:199
+msgid "Залишайте заявку і наші менеджери Вам допоможуть!"
+msgstr ""
+
+#: .\main\templates\main\index.html:203
+msgid "Ваше ім’я"
+msgstr "Ваше имя"
+
+#: .\main\templates\main\index.html:206
+msgid "Номер телефону"
+msgstr "Номер телефона"
+
+#: .\main\templates\main\index.html:207
+msgid "Відправити"
+msgstr "Отправить"
+
+#: .\main\templates\main\index.html:212
+msgid "Безкоштовне працевлаштування медичного персоналу у Німеччині"
+msgstr ""
+
+#: .\main\templates\main\index.html:220
+msgid "Хто ми?"
+msgstr "Кто мы?"
+
+#: .\main\templates\main\index.html:223
+msgid ""
+"Workconsult - німецько-українська компанія, що діє в Україні з 2016 року. "
+"Одним з головних напрямків нашої діяльності є підготовка та працевлаштування "
+"спеціалістів у німецькомовних країнах. Серед наших партнерів – великі мережі "
+"медичних закладів по всій Німеччині та німецькі агенства з працевлаштування "
+"медичного персоналу. Підтвердженням нашої надійності є багаторічний досвід "
+"роботи у Німеччині, Австрії та на Філіппінах."
+msgstr ""
+
+#: .\main\templates\main\index.html:229
+msgid "Вибір країни"
+msgstr ""
+
+#: .\main\templates\main\index.html:233
+msgid "Головний сайт компанії"
+msgstr ""
+
+#: .\main\templates\main\index.html:240
+msgid "Відео інформація про програму"
+msgstr ""
+
+#: .\main\templates\main\index.html:250
+msgid ""
+"Компанія Workconsult разом з німецькими партнерами пропонує медсестрам та\n"
+"          медбратам України безкоштовний повний цикл підготовки та "
+"працевлаштування у Німеччині"
+msgstr ""
+
+#: .\main\templates\main\index.html:252
+msgid "Що включає програма?"
+msgstr ""
+
+#: .\main\templates\main\index.html:253
+msgid ""
+"Роботодавці оплачують усі етапи програми, тому програма є безкоштовною для\n"
+"          українських медсестер"
+msgstr ""
+
+#: .\main\templates\main\index.html:262
+msgid ""
+"Онлайн-курс німецької мови, що проводиться на базі нашої сучасної школи\n"
+"                  go4more.School."
+msgstr ""
+
+#: .\main\templates\main\index.html:269
+msgid "Тривалість курсу приблизно 12 місяців."
+msgstr ""
+
+#: .\main\templates\main\index.html:270
+msgid ""
+"Підготовка до мовного іспиту (рівень В2). Складення іспиту оплачується\n"
+"                  роботодавцем"
+msgstr ""
+
+#: .\main\templates\main\index.html:272
+msgid "Додаткові курси з медичною термінологією."
+msgstr ""
+
+#: .\main\templates\main\index.html:280
+msgid "Підготовка до іспиту на професійні знання та здача іспиту."
+msgstr ""
+
+#: .\main\templates\main\index.html:281
+msgid "Заняття з підготовки також проходять онлайн."
+msgstr ""
+
+#: .\main\templates\main\index.html:289
+msgid "Оформлення, переклад та засвідчення документів."
+msgstr ""
+
+#: .\main\templates\main\index.html:290
+msgid "Авіапереліт. Вартість квитка компенсується роботодавцем."
+msgstr ""
+
+#: .\main\templates\main\index.html:291
+msgid "Допомога при поселенні."
+msgstr ""
+
+#: .\main\templates\main\index.html:299
+msgid "Підбір вакансій відповідно до Вашого рівня кваліфікації."
+msgstr ""
+
+#: .\main\templates\main\index.html:300
+msgid "Організація співбесіди з майбутніми роботодавцями."
+msgstr ""
+
+#: .\main\templates\main\index.html:301
+msgid "За необхідності проходження оплачуваної практики на базі роботодавця."
+msgstr ""
+
+#: .\main\templates\main\index.html:302
+msgid "Офіційне працевлаштування у медичних закладах Німеччини."
+msgstr ""
+
+#: .\main\templates\main\index.html:322
+msgid "Що потрібно, щоб працювати медсестрою у Німеччині?"
+msgstr ""
+
+#: .\main\templates\main\index.html:331
+msgid "Рівень німецької:"
+msgstr ""
+
+#: .\main\templates\main\index.html:334
+msgid "Підтверджена кваліфікація:"
+msgstr ""
+
+#: .\main\templates\main\index.html:337
+#, fuzzy
+#| msgid "Контакти"
+msgid "Практика:"
+msgstr "Контакты"
+
+#: .\main\templates\main\index.html:340
+msgid "Документи:"
+msgstr ""
+
+#: .\main\templates\main\index.html:344
+msgid "Прогорнути вліво"
+msgstr ""
+
+#: .\main\templates\main\index.html:348
+msgid "Прогорнути вправо"
+msgstr ""
+
+#: .\main\templates\main\index.html:360
+msgid ""
+"1Для того, щоб мати право працювати медсестрою в Німеччині, у кандидата "
+"рівень\n"
+"              німецької мови має бути В2, і підтвердити його треба, "
+"міжнародно визнаним іспитом. Для подання заяви,\n"
+"              проходження співбесіди з німецькою клінікою, проходження "
+"практики – рівень німецької мови може бути і\n"
+"              нижче.\n"
+"              Для тих кандидатів, у кого немає потрібного рівня німецької, "
+"ми пропонуємо свої курси німецької мови\n"
+"              безкоштовно або за пільговою ціною. Ми використовуємо "
+"спеціальну методику, розроблену нами для українських\n"
+"              медсестер, що обов’язково включає вивчення медичної лексики. "
+"Це допомагає швидко адаптуватися до роботи в\n"
+"              Німеччині."
+msgstr ""
+
+#: .\main\templates\main\index.html:372
+msgid ""
+"2Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate "
+"voluptatibus\n"
+"              at quisquam repellat, praesentium magni dolore nobis aliquid, "
+"eaque natus, nihil aut voluptas sapiente\n"
+"              aliquam deserunt amet numquam? Enim, assumenda?"
+msgstr ""
+
+#: .\main\templates\main\index.html:378
+msgid ""
+"3Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat est "
+"molestias\n"
+"              quae eos voluptatum amet tempore laboriosam soluta autem, cum "
+"id tempora ullam velit sunt incidunt natus\n"
+"              quis beatae recusandae fugit eligendi voluptates provident "
+"pariatur! Perspiciatis sequi ducimus veniam\n"
+"              obcaecati porro amet. Nam dolorum mollitia itaque rem maiores "
+"error illo laudantium deserunt quas earum\n"
+"              recusandae adipisci pariatur nesciunt, quod sit numquam beatae "
+"animi atque fuga voluptate? Reiciendis\n"
+"              maxime dolorum consequuntur iusto illum mollitia nobis "
+"aspernatur vitae earum consectetur quo perferendis,\n"
+"              asperiores beatae. Non doloremque deleniti, perspiciatis dolor "
+"illo, aperiam quas possimus magnam iste\n"
+"              quidem harum dolorem blanditiis. Sunt delectus quas eligendi "
+"iusto quo quos non doloribus et quae eos eum\n"
+"              nemo cumque veniam, ratione sint tenetur incidunt vero odit "
+"deserunt rem perferendis ducimus."
+msgstr ""
+
+#: .\main\templates\main\index.html:390
+msgid ""
+"4Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit est "
+"soluta id\n"
+"              alias a dicta quos placeat hic magnam! Ea, nihil iste? Error "
+"molestias maiores laborum tempora, iste animi\n"
+"              nulla optio in doloremque sunt atque architecto? Nemo "
+"consequuntur, inventore, aperiam, non veniam aut\n"
+"              magnam quod quia blanditiis commodi nesciunt? Similique, "
+"repellendus quia voluptatem qui ratione sunt,\n"
+"              quasi delectus animi facilis maxime enim, deserunt sed iusto "
+"iure? Sunt ipsum eum quod recusandae\n"
+"              doloremque labore tenetur, veniam fugiat, unde aspernatur "
+"vitae."
+msgstr ""
+
+#: .\main\templates\main\index.html:405
+msgid "Курс німецької"
+msgstr ""
+
+#: .\main\templates\main\index.html:414
+msgid ""
+"Мовна підготовка проходить на базі онлайн-школи компанії Workconsult-go4more."
+"School, де\n"
+"          професійні викладачі з сертифікованим рівнем володіння німецькою "
+"мовою С1-С2 за 12 місяців навчання пройдуть\n"
+"          шлях зі студентом від початківця до B2.\n"
+"\n"
+"          Маючи позитивний досвід підготовки бiльш як 500 філіппінських "
+"медсестер, ми гарантуємо, що успішне проходження\n"
+"          програми вивчення німецької мови в запорукою отримання безцінного "
+"досвіду роботи за фахом медичної сестри в\n"
+"          Німеччині протягом двох років."
+msgstr ""
+
+#: .\main\templates\main\index.html:434
+msgid "Вимоги до кандидатів"
+msgstr ""
+
+#: .\main\templates\main\index.html:438
+msgid "Кандидат зобов'язується:"
+msgstr ""
+
+#: .\main\templates\main\index.html:440
+msgid ""
+"мати освіту за спеціалізацією «Сестринська справа» або бути студентом\n"
+"                останніх курсів"
+msgstr ""
+
+#: .\main\templates\main\index.html:442
+msgid "пройти онлайн-курси німецької мови та отримати сертифікат рівня В2"
+msgstr ""
+
+#: .\main\templates\main\index.html:443
+msgid ""
+"приділити час для проходження програми загальної підготовки строком 16\n"
+"                місяців"
+msgstr ""
+
+#: .\main\templates\main\index.html:445
+msgid ""
+"надати необхідні документи: диплом (за наявності) чи довідка про\n"
+"                навчання, коротка автобіографія, довідка про несудимість, "
+"сертифікат про навчання та володіння мовою,\n"
+"                якщо є."
+msgstr ""
+
+#: .\main\templates\main\index.html:451
+msgid "Анкета"
+msgstr ""
+
+#: .\main\templates\main\index.html:452
+msgid "Диплом"
+msgstr ""
+
+#: .\main\templates\main\index.html:453
+msgid "Фото"
+msgstr ""
+
+#: .\main\templates\main\index.html:464
+#, fuzzy
+#| msgid "Робота у Німеччині"
+msgid "Чому саме Німеччина?"
+msgstr "Работа в Германии"
+
+#: .\main\templates\main\index.html:515 .\main\templates\main\index.html:528
+#: .\main\templates\main\index.html:537 .\main\templates\main\index.html:546
+#: .\main\templates\main\index.html:555 .\main\templates\main\index.html:564
+#: .\main\templates\main\index.html:573 .\main\templates\main\index.html:597
+#: .\main\templates\main\index.html:605 .\main\templates\main\index.html:613
+#: .\main\templates\main\index.html:621 .\main\templates\main\index.html:636
+#: .\main\templates\main\index.html:644 .\main\templates\main\index.html:652
+#: .\main\templates\main\index.html:660
+#, fuzzy
+#| msgid "Робота у Німеччині"
+msgid "Фото Німеччини"
+msgstr "Работа в Германии"
+
+#: .\main\templates\main\index.html:588
+msgid "Partner Facilities"
+msgstr ""
+
+#: .\main\templates\main\index.html:679 .\main\templates\main\index.html:682
+#: .\main\templates\main\index.html:685 .\main\templates\main\index.html:688
+#: .\main\templates\main\index.html:691 .\main\templates\main\index.html:694
+#: .\main\templates\main\index.html:697 .\main\templates\main\index.html:700
+#: .\main\templates\main\index.html:703 .\main\templates\main\index.html:706
+#: .\main\templates\main\index.html:709 .\main\templates\main\index.html:712
+#, fuzzy
+#| msgid "Відгуки"
+msgid "Відгук"
+msgstr "Отзывы"
+
+#: .\main\templates\main\index.html:727
+msgid "Наш досвід в інших країнах"
+msgstr ""
+
+#: .\main\templates\main\index.html:728
+msgid ""
+"Маючи позитивний досвід підготовки бiльш як 500 філіппінських медсестер, ми\n"
+"          гарантуємо, що успішне проходження програми вивчення німецької "
+"мови в запорукою отримання безцінного досвіду\n"
+"          роботи за фахом медичної сестри в Німеччині протягом двох років."
+msgstr ""
+
+#: .\main\templates\main\index.html:739 .\main\templates\main\index.html:746
+#: .\main\templates\main\index.html:753 .\main\templates\main\index.html:760
+msgid "Фото команди"
+msgstr ""
+
+#: .\main\templates\main\index.html:771
+msgid "Галерея WorkConsult"
+msgstr ""
+
+#: .\main\templates\main\index.html:783 .\main\templates\main\index.html:791
+#: .\main\templates\main\index.html:799 .\main\templates\main\index.html:807
+#: .\main\templates\main\index.html:815 .\main\templates\main\index.html:823
+msgid "Фото співробітників компанії"
+msgstr ""
+
+#: .\main\templates\main\index.html:837
+msgid ""
+"Заповнюйте анкету, або залишайте заявку і наші менеджери Вам допоможуть!"
+msgstr ""
+
+#: .\main\templates\main\index.html:839
+#, fuzzy
+#| msgid "Заповнити форму"
+msgid "Заповнити анкету"
+msgstr "Заполнить форму"
+
+#: .\main\templates\main\index.html:840
+#, fuzzy
+#| msgid "Заповнити форму"
+msgid "Замовити дзвінок"
+msgstr "Заполнить форму"
+
+#: .\main\templates\main\index.html:857 .\main\templates\main\index.html:930
+msgid "ТОВ “Воркконсалт”"
+msgstr ""
+
+#: .\main\templates\main\index.html:858 .\main\templates\main\index.html:931
+msgid "36000, Україна, м. Полтава, вул. Соборності, 50"
+msgstr ""
+
+#: .\main\templates\main\index.html:859
+#, fuzzy
+#| msgid "Номер телефону"
+msgid "Телефон"
+msgstr "Номер телефона"
+
+#: .\main\templates\main\index.html:874 .\main\templates\main\index.html:945
+msgid "Медаль лідер року"
+msgstr ""
+
+#: .\main\templates\main\index.html:881 .\main\templates\main\index.html:952
+msgid "Медаль вибір споживача"
+msgstr ""
+
+#: .\main\templates\main\index.html:888 .\main\templates\main\index.html:959
+#, fuzzy
+#| msgid "Робота у Німеччині"
+msgid "Золота медаль"
+msgstr "Работа в Германии"
+
+#: .\main\templates\main\index.html:932
+#, fuzzy
+#| msgid "Номер телефону"
+msgid "Телефон:"
+msgstr "Номер телефона"
+
+#: .\main\templates\main\index.html:999
+msgid "Логотип компанії go4more"
+msgstr ""
+
+#: .\main\templates\main\index.html:1005
+msgid "Логотип компанії WorkConsult"
+msgstr ""

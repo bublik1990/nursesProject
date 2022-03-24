@@ -1,0 +1,66 @@
+.advantages {
+  padding-top: 0;
+}
+
+.advantages__container {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.advantages__wrap {
+  margin-top: 30px;
+}
+
+.advantages__image {
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    display: none;
+  }
+}
+
+.advantages__list {
+  font-size: 13px;
+  line-height: 1.7;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-image: url("../images/doctors-hands-holding-medical-care-objects.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 17px;
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    background-image: url("../images/multiracial-male-female-colleagues-having-discussion-team-meeting.png");
+  }
+}
+
+.advantages__item {
+  @media screen and (min-width: $tablet-breakpoint) {
+    width: 70%;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: $netbook-breakpoint) {
+    width: 80%;
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    width: 73%;
+  }
+}
+
+.advantages__item::before {
+  margin-right: 19px;
+  width: 2px;
+  height: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 7px;
+  background-color: black;
+  content: "";
+}
